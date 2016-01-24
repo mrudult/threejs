@@ -1,0 +1,30 @@
+/* custom fonts */
+@font-face {
+	font-family:"FishFingers";
+	src:url("../fonts/FishFingers/Fishfingers.eot?") format("eot"),url("../fonts/FishFingers/Fishfingers.woff") format("woff"),url("../fonts/FishFingers/Fishfingers.ttf") format("truetype"),url("../fonts/FishFingers/Fishfingers.svg#FISHfingers") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+#globe
+{
+	z-index: -1;
+	position: absolute; 
+	left: 0px;
+	top: 0px;
+	}
+#heading {
+	text-align: center;
+	font-size: 8em;
+	font-family: 'FishFingers',"Open Sans";
+}
+#heading  #aarohi{
+	color: #EF4423;
+}
+	#heading  #version {
+	color: #35505F;
+}
+button{
+	cursor:pointer;
+}

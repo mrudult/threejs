@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Aarohi 2016 | Central India's Largest Cultural Festival</title>
+
+		<!--- custom css-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/menu.css"> <!-- Resource style -->
+		<link rel="stylesheet" type="text/css" href="css/fullscreen_overlay.css" >
+
+		<!-- jquery-->
+		<script src="js/jquery/jquery-2.1.1.js"></script>
+	</head>
+	<body id ="main-content">
+	<!-- menu -->
+	<div class="main_menu">
+	<header>
+		<div class="cd-logo">
+		<a href="#0"><img src="img/hobo.png" alt="Logo"></a>
+		</div>
+
+		<nav class="cd-main-nav-wrapper">
+			<ul class="cd-main-nav">
+				<li>
+				<a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )"> About us</a>
+				</li>
+				<li>
+				<a href="#0">Proshow</a>
+				</li>
+				<li>
+				<a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
+				</li>
+				<li>
+				<a href="#0">Social Initiatives</a>
+				</li>
+				<li>
+				<a href="#0">Workshops</a>
+				</li>
+				<li>
+				<a onclick="gotoGlobeMenu(globe_menu.get('sponsors').x , globe_menu.get('sponsors').z )">Sponsors</a>
+				</li>
+				<li>
+					<a href="#0" class="cd-subnav-trigger"><span>Events</span></a>
+					<ul>
+						<li class="go-back">
+						<a href="#0">Menu</a>
+						</li>
+						<li>
+						<a href="#0">Dance</a>
+						</li>
+						<li>
+						<a href="#0">Musicals</a>
+						</li>
+						<li>
+						<a onclick="gotoGlobeMenu(globe_menu.get('art_and_literary').x , globe_menu.get('art_and_literary').z )">Art And Literary</a>
+						</li>
+						<li>
+						<a onclick="gotoGlobeMenu(globe_menu.get('filmography').x , globe_menu.get('filmography').z )">Drama</a>
+						</li>
+						<li>
+						<a href="#" onclick="gotoGlobeMenu(globe_menu.get('informals').x , globe_menu.get('informals').z )">Informals</a>
+						</li>
+						<li>
+						<a href="#0" class="placeholder">Placeholder</a>
+						</li>
+					</ul>
+				</li>
+			</ul> <!-- .cd-main-nav -->
+		</nav> <!-- .cd-main-nav-wrapper -->
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	</header>
+	</div>
+
+			<!-- ------------------------------------------------------------ -->
+		<!-- <div id = "heading">
+			<span id="aarohi">Aarohi</span><span id ="version"> 2016</span>
+			<br>
+		</div> -->
+		<div class="overlay overlay-corner">
+			<button type="button" class="overlay-close">Close</button>
+			<div id="popup_content"></div>
+		</div>
+		<div id="globe"></div>
+		<script src="js/build/three.min.js"></script>
+		<script src="js/libs/tween.min.js"></script>
+		<script src="js/THREEx.KeyboardState.js"></script>
+		<script src="js/renderers/Projector.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
+		<script src="js/Detector.js"></script>
+		<script>
+	if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+	var container,controls;
+
+	var mouseVector =  new THREE.Vector3();
+	projector = new THREE.Projector();
+
+
+	var windowHalfX = window.innerWidth / 2;
+	var windowHalfY = window.innerHeight / 2;
+	// global var used for rotation method
+	var rotWorldMatrix,rotObjectMatrix, rotWorldMatrix, rotation_matrix, camera, scene, renderer, objects, skyBox, globe, parent;
+
+	// menu item variables
+	var contact_us, sponsors, film, guitar, informals, proshow, art, light, cn;
+
+	// for mouse hover
+	var canvas1, context1,sprite1,texture1,mouse=new THREE.Vector3();
+
+	// custom axes for rotation
+	var x_axis = new THREE.Vector3(1,0,0);
+	var z_axis = new THREE.Vector3(0,0,1);
+	var xrot=0,zrot=0;
+
+	// var for getting keyboard event
+	var keyboard = new THREEx.KeyboardState();
+
+	// Map having menu on globe and their corresponding x and z rotation respectively
+	var globe_menu = new Map();
+	globe_menu.set("contact_us" , { x:0 , z:0 });
+	globe_menu.set("sponsors" , { x:-0.76 , z:-1.36 });
+	globe_menu.set("filmography" , { x:1.1568, z:0.15044 });
+	globe_menu.set("informals" , { x:3.12 , z:4.4800 });
+	globe_menu.set("art_and_literary" , { x:-1.566370 , z:-0.6031853 });
+	globe_menu.set("cn" , { x:3.64 , z:2.2 });
+
+
+	init();
+	function init()
+	{
+		container = document.getElementById('globe');
+		document.body.appendChild( container );
+		// creating a scene
+		scene = new THREE.Scene();
+
+		// camera
+		var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
+		var VIEW_ANGLE = 45, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 2000000;
+		camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
+		scene.add(camera);
+		camera.position.set(0,0,50);
+		camera.lookAt(0,50,0);
+
+		// renderer
+		renderer = new THREE.WebGLRenderer();
+		renderer.setPixelRatio( window.devicePixelRatio );
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		container.appendChild( renderer.domElement );
+
+		// controls
+		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		controls.enableKeys = false;
+		controls.enableRotate = false;
+		controls.minDistance = 30;
+		controls.maxDistance = 150;
+
+
+		// parent object
+		parent = new THREE.Object3D();
+		parent.position.y=-40;
+		parent.position.x=50;
+		parent.position.z=-90;
+		scene.add(parent);
+
+		//skybox
+		var imagePrefix = "images/sky1/skybox_";
+		var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
+		var imageSuffix = ".png";
+		var imageURLs = [];
+		for (var i = 0; i < 6; i++)
+		{
+			 imageURLs.push( imagePrefix + directions[i] + imageSuffix );
+		}
+		 var materialArray = [];
+		 for (var i = 0; i < 6; i++)
+		  materialArray.push( new THREE.MeshBasicMaterial({
+		   map: THREE.ImageUtils.loadTexture( imageURLs[i] ),
+		   side: THREE.BackSide
+		  }));
+		 var skyGeometry = new THREE.CubeGeometry( 50000, 50000, 50000 );
+		 var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
+		  skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
+		  scene.add(skyBox);
+
+		//globe
+		var jsonLoader = new THREE.JSONLoader();
+		jsonLoader.load( "models/globe/Globe2.js", function (geometry,materials)
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			globe = new THREE.Mesh( geometry, material );
+			globe.position.y = -40;
+			globe.position.x = 50;
+			globe.position.z = -90;
+			globe.scale.set(0.020,0.020,0.020);
+			scene.add( globe );
+		} );
+
+		// menu items for globe ---------------------------------------------------------------------------
+		jsonLoader.load( "models/menu_items/Filmo.js", function (geometry,materials)
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			film = new THREE.Mesh( geometry, material );
+			film.name = "film";
+			film.scale.set(0.020,0.020,0.020);
+			parent.add(film);
+		} );
+
+		jsonLoader.load( "models/menu_items/Contact.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			contact_us = new THREE.Mesh( geometry, material );
+			contact_us.scale.set(0.020,0.020,0.020);
+			contact_us.name = "contact_us";
+			parent.add(contact_us);
+		}
+		);
+
+		jsonLoader.load( "models/menu_items/sponsors_final.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			sponsors = new THREE.Mesh( geometry, material );
+			sponsors.scale.set(0.020,0.020,0.020);
+			sponsors.name = "sponsors"
+			parent.add(sponsors);
+		}
+		 );
+		jsonLoader.load( "models/menu_items/informals_final.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			informals = new THREE.Mesh( geometry, material );
+			informals.scale.set(0.020,0.020,0.020);
+			informals.name = "informals"
+			parent.add(informals);
+		}
+		 );
+		jsonLoader.load( "models/menu_items/Proshow.js",
+		function ( geometry, materials )
+		{	var material = new THREE.MeshFaceMaterial( materials );
+			proshow = new THREE.Mesh( geometry, material );
+			proshow.scale.set(0.020,0.020,0.020);
+			proshow.name = "proshow"
+			parent.add(proshow);
+		}
+		 );
+		jsonLoader.load( "models/menu_items/art.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			art = new THREE.Mesh( geometry, material );
+			art.scale.set(0.020,0.020,0.020);
+			art.name = "Art and Literary"
+			parent.add(art);
+		}
+		 );
+
+		jsonLoader.load( "models/menu_items/CN.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			cn = new THREE.Mesh( geometry, material );
+			cn.scale.set(0.020,0.020,0.020);
+			cn.name = "cultural_nite";
+			parent.add(cn);
+		}
+		 );
+		jsonLoader.load( "models/menu_items/guitar.js",
+		function ( geometry, materials )
+		{
+			var material = new THREE.MeshFaceMaterial( materials );
+			guitar = new THREE.Mesh( geometry, material );
+			guitar.scale.set(0.020,0.020,0.020);
+			cn.name = "Musicals";
+			parent.add(guitar);
+		}
+		 );
+		// ----------------------------------------------------------------------------------------------------
+		// lights
+		var ambientLight = new THREE.AmbientLight(0xcccccc);
+		scene.add(ambientLight);
+		var light1 = new THREE.DirectionalLight( 0xffffff, 0.6 );
+		//light1.castShadow = true;
+		light1.position.set(1,0,0);
+		scene.add( light1 );
+
+		var light2 = new THREE.DirectionalLight( 0xffffff, .60 );
+		light2.position.set(-1,1,0);
+		scene.add( light2 );
+
+		// User interaction
+	document.addEventListener( 'mousedown', onMouseDown, false );
+	window.addEventListener( 'resize', onWindowResize, false );
+	animate();
+
+	}
+
+	// object picker function
+	function onMouseDown( event )
+	{
+		mouseClicked= true;
+		event.preventDefault();
+		console.log("Click!");
+		var popup_box = document.getElementById('overlay_link');
+		// now we update the mouseVector variable
+		mouseVector.x = (event.clientX / window.innerWidth)*2 - 1;
+		mouseVector.y = -(event.clientY / window.innerHeight)*2 + 1;
+
+		// lets find the intersections
+		// making 3d vector using the mouse click 2d coordinates , z coordinaate is given 0
+		var vector = new THREE.Vector3(mouseVector.x , mouseVector.y ,0);
+		vector.unproject(camera);
+
+		// now cast a ray in  thee direction of the camera and see the objects it passes through
+		var ray =  new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+		var intersects = ray.intersectObjects( parent.children );
+	  	if(intersects.length > 0)
+			{
+				var url = "overlay_scripts/"+ intersects[0].object.name+".html";
+				toggleOverlay();
+				loadHTML(url);
+			}
+		}
+		function loadHTML( url)
+		{
+			 $('#popup_content').load(url, function( status )
+			 	{
+			 		if(status =="error")
+			 		{
+			 			alert("error");
+			 			$('#popup_content').load("overlay_scripts/404.html");
+			 		}
+			 	});
+		}
+	function gotoGlobeMenu(x_desired,z_desired)
+	{
+		new TWEEN.Tween(globe.rotation).to( {x: x_desired , z : z_desired},1200 ).easing(TWEEN.Easing.Elastic.Out).start();
+		new TWEEN.Tween(parent.rotation).to( {x: x_desired , z : z_desired},1200).easing(TWEEN.Easing.Elastic.Out).start();
+			xrot=x_desired;
+			zrot=z_desired;
+	}
+
+	function onWindowResize() {
+
+		windowHalfX = window.innerWidth / 2;
+		windowHalfY = window.innerHeight / 2;
+
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+	}
+
+
+	function animate()
+	{
+		requestAnimationFrame( animate );
+		render();
+		update();
+	}
+
+	// used for debugging
+	function netRotate()
+	{
+		console.log("x rotation is"+xrot+ " zrotation is  " + zrot);
+	}
+
+	function update()
+	{
+		if ( keyboard.pressed("s") )
+		{
+			xrot+=0.04;
+			skyBox.rotation.x+=0.01;
+			parent.rotation.x=xrot;
+			globe.rotation.x=xrot;
+
+		}
+		else if ( keyboard.pressed("w") )
+		{
+			xrot-=0.04;
+			skyBox.rotation.x-=0.01;
+			parent.rotation.x=xrot;
+			globe.rotation.x=xrot;
+		}
+		if ( keyboard.pressed("a") )
+		{
+			zrot+=0.04;
+			skyBox.rotation.z+=0.01;
+			parent.rotation.z=zrot;
+			globe.rotation.z=zrot;
+		}
+		else if ( keyboard.pressed("d") )
+		{
+			zrot-=0.04;
+			skyBox.rotation.z-=0.01;
+			parent.rotation.z=zrot;
+			globe.rotation.z=zrot;
+		}
+		if(zrot >= 2*Math.PI)
+		{
+			zrot-= 2*Math.PI;
+		}
+		else if(zrot <= -2*Math.PI)
+		{
+			zrot+= 2*Math.PI;
+		}
+		if(xrot <= -2*Math.PI)
+		{
+			xrot+= 2*Math.PI;
+		}
+		else if(xrot >= 2*Math.PI)
+		{
+			xrot-= 2*Math.PI;
+		}
+		TWEEN.update();
+
+		// controls.update();
+	}
+	function render()
+	{
+		renderer.render( scene, camera );
+	}
+		</script>
+				<!-- js files for menu-->
+		 <script src="js/menu/classie.js"></script>
+		 <script src="js/menu/main.js"></script>
+		 <script src="js/menu/modernizr.js"></script>
+
+		 <!-- js file for popup -->
+		 <script src="js/popup/overlay.js"></script>
+	</body>
+</html>
