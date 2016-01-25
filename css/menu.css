@@ -99,9 +99,11 @@ header::before {
   .cd-logo {
     position: absolute;
     z-index: 2;
-    margin-left: 5%;
+    margin-top: 0.45%;
+    margin-left: 2%;
   }
   .cd-logo img {
+    width:70%;
     margin-top: 0px;
   }
 }
