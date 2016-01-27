@@ -1,0 +1,173 @@
+<style>
+    p {
+        font-weight: lighter;
+        font-size: 0.5em;
+        letter-spacing: 0.1em;
+        font-family: 'helvetica';
+    }
+    /*musical*/
+    
+    #purple {
+        display: block;
+    }
+    
+    #madhur {
+        display: none;
+    }
+    
+    #rhythmDivine {
+        display: none;
+    }
+    
+    #swarmanzar {
+        display: none;
+    }
+    
+    #eventImg {
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+    
+    #eventContent {}
+    
+    .content {
+        display: inline-flex;
+    }
+    
+    #menu ul {
+        font-family: "FishFingers";
+    }
+    
+    .active {
+        text-decoration: underline;
+        background-color: #4CAF50;
+    }
+    
+    #menu {
+        margin: 0px auto;
+    }
+    
+    #menu ul {
+        text-align: center;
+    }
+    
+    #menu li {
+        display: inline-block;
+    }
+    
+    #menu li a,
+    #menu li span {
+        display: inline-block;
+        margin-left: 0.50em;
+        margin: 2em 1.5em 1em 1.5em;
+        letter-spacing: 0.20em;
+        text-decoration: none;
+        font-size: 0.90em;
+        font-weight: 600;
+        text-transform: uppercase;
+        outline: 0;
+        color: #FFF;
+    }
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="application/javascript">
+    $(document).ready(function() {
+
+        $(window).scroll(function() {
+
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 230) {
+                $('#menu-wrapper').addClass('navbar-fixed');
+            }
+            if ($(window).scrollTop() < 230) {
+                $('#menu-wrapper').removeClass('navbar-fixed');
+            }
+        });
+    });
+</script>
+<script type="application/javascript">
+    function viewEvent(var1) {
+        document.getElementById('street').style.display = "none";
+        document.getElementById('stage').style.display = "none";
+        $('#streetli').removeClass('active');
+        $('#stageli').removeClass('active');
+        $('#menu-wrapper').addClass('navbar-fixed');
+        if (var1 == '1') {
+            document.getElementById('street').style.display = "block";
+            document.title = "Abhivyakti";
+            $('#streetli').addClass('active');
+            document.getElementById("street").scrollIntoView();
+        }
+        if (var1 == '2') {
+            document.getElementById('stage').style.display = "block";
+            document.title = "Halla Bol";
+            $('#stageli').addClass('active');
+            document.getElementById("stage").scrollIntoView()
+        }
+    }
+</script>
+<div id="menu-wrapper">
+    <nav id="menu">
+        <ul>
+            <li id="streetli" class="active"><a href="javascript:viewEvent('1')">Street Play</a></li>
+            <li id="stageli"><a href="javascript:viewEvent('2')">Stage Play</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="wrapper">
+    <div id="street">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
+                <div class="title">
+                    <h1 style="text-align:center; padding-top:20px">Hallabol</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p class="byline" style="text-align:center; padding-top:20px">Ruthless master is not the culprit but the dumb slave is!</p>
+                            <p style="text-align:center;"><strong>Now it is the time to raise your voice against the evil and send it back to its den. It is the time to redeem your happiness.</strong></p>
+                            <p style="text-align:center;"><strong>Are your words and actions loud enough to energize even the dullest?</strong></p>
+                            <p style="text-align:center;"><strong>Hallabol, a street play competition wherein you can display your ingenious acting skills.</strong></p>
+                            <p style="text-align:center;"><strong>Let you your mask turn down the injustice!</strong></p>
+                            <p class="byline" style="text-align:center;">Lots of prizes to be won!!!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="stage">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
+                <div class="title">
+                    <h1 style="text-align:center;">Abhivyakti</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p class="byline" style="text-align:center; padding-top:20px">“Life is a drama,
+                                <br>A Play Of Memories,
+                                <br>Surfeit Of Tragedies And Comedies,
+                                <br>A Metaphor Of Enigma!”</p>
+                            <p style="text-align:center;"><strong>Time has come to obliterate the agony that devours us and joins the fun regime!</strong></p>
+                            <p style="text-align:center;"><strong>Cast away the gloomy countenances, Put on the fun mask, Shout out loud:
+                            <br>
+                            <p style="text-align:center;"><b>‘HAKUNA MATATA!’</b></p></strong></p>
+                            <p style="text-align:center;"><strong>AAROHI 16 presents dramatics event Abhivyakti</strong></p>
+                            <p style="text-align:center;"><strong>A Cause For Applause,</strong></p>
+                            <p style="text-align:center;"><strong>Where you Express To Impress,</strong></p>
+                            <p style="text-align:center;"><strong>To Scatter Joy And Shatter Pain!!</strong></p>
+                            <p style="text-align:center;"><strong>Draft your script, Devise your play, Let the spectators behold the mesmerizing blend of fantasy with reality!!</strong></p>
+                            <p class="byline" style="text-align:center;">Exciting prizes awaiting their deserver!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,172 @@
+<style>
+    p {
+        font-weight: lighter;
+        font-size: 0.5em;
+        letter-spacing: 0.1em;
+        font-family: 'helvetica';
+    }
+    /*musical*/
+    
+    #purple {
+        display: block;
+    }
+    
+    #madhur {
+        display: none;
+    }
+    
+    #rhythmDivine {
+        display: none;
+    }
+    
+    #swarmanzar {
+        display: none;
+    }
+    
+    #eventImg {
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+    
+    #eventContent {}
+    
+    .content {
+        display: inline-flex;
+    }
+    
+    #menu ul {
+        font-family: "FishFingers";
+    }
+    
+    .active {
+        text-decoration: underline;
+        background-color: #4CAF50;
+    }
+    
+    #menu {
+        margin: 0px auto;
+    }
+    
+    #menu ul {
+        text-align: center;
+    }
+    
+    #menu li {
+        display: inline-block;
+    }
+    
+    #menu li a,
+    #menu li span {
+        display: inline-block;
+        margin-left: 0.50em;
+        margin: 2em 1.5em 1em 1.5em;
+        letter-spacing: 0.20em;
+        text-decoration: none;
+        font-size: 0.90em;
+        font-weight: 600;
+        text-transform: uppercase;
+        outline: 0;
+        color: #FFF;
+    }
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="application/javascript">
+    $(document).ready(function() {
+
+        $(window).scroll(function() {
+
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 230) {
+                $('#menu-wrapper').addClass('navbar-fixed');
+            }
+            if ($(window).scrollTop() < 230) {
+                $('#menu-wrapper').removeClass('navbar-fixed');
+            }
+        });
+    });
+</script>
+
+
+<script type="application/javascript">
+    function viewEvent(var1) {
+        document.getElementById('litrary').style.display = "none";
+        document.getElementById('art_cono').style.display = "none";
+        $('#art_conoli').removeClass('active');
+        $('#litraryli').removeClass('active');
+        $('#menu-wrapper').addClass('navbar-fixed');
+        if (var1 == '1') {
+            document.getElementById('art_cono').style.display = "block";
+            document.title = "Art Conoscenza";
+            document.getElementById("art_cono").scrollIntoView();
+            $('#art_conoli').addClass('active');
+
+        }
+        if (var1 == '2') {
+            document.getElementById('litrary').style.display = "block";
+            document.title = "Litrary";
+            $('#litraryli').addClass('active');
+            document.getElementById("litrary").scrollIntoView();
+        }
+
+
+    }
+</script>
+<div id="menu-wrapper">
+    <nav id="menu">
+        <ul>
+            <li id="art_conoli" class="active"><a href="javascript:viewEvent('1')">Art Conoscenza</a></li>
+            <li id="litraryli"><a href="javascript:viewEvent('2')">Litrary</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="wrapper">
+    <div id="art_cono">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <div class="title">
+                    <h1 style="text-align:center; padding-top:20px">Art Conoscenza</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p class="byline" style="text-align:center; padding-top:20px">"Every child is an artist. The problem is how to remain an artist once we grow up. - Pablo Picasso."</p>
+                            <p style="text-align:center;"><strong>This February, unleash the artist within you. Break free from the shackles of boredom and tap into the brilliant moral part of your being to reproduce your thoughts in arts and images.</strong></p>
+                            <p style="text-align:center;"><strong>Art gives us a chance to not only experience but also express the beauty that mother nature beholds.</strong></p>
+                            <p style="text-align:center;"><strong>Now the time has come, to awaken the artist within you. Abandon your worries at the threshold of your house and come participate in this hunt for the modern day Picasso.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="litrary">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <div class="title">
+                    <h1 style="text-align:center; padding-top:20px">Alag Angle</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p style="text-align:center;"><strong>“Play The Moments
+                                <br>Pause The Memories<br>
+                                Stop The Memories<br>
+                                Rewind The Happiness”</strong>
+                            </p>
+                            <p style="text-align:center;"><strong>It is not just to capture a moment but to treasure an event. </strong></p>
+                            <p style="text-align:center;"><strong>Everyone loses their worries and gets rejuvenated on watching a sensational movie. Behind the success of a movie there is an ingenious team that works on it.<br>
+                                'Alag Angle ' provides a platform for all film makers to exhibit their film making talent. <br>
+                                To be impressive, movie should not only be an audio and visual delight but also some kind of eye opening media. <br>
+                                This is your challenge. Show us how you roll it!!<br>
+                                So its time for  Lights Camera and Action.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

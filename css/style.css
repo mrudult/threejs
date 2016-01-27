@@ -5,12 +5,18 @@
 	font-weight:normal;
 	font-style:normal;
 }
-
-
+@font-face {
+	font-family:"Helsinki";
+	src:url("../fonts/Helsinki/helsinki.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+body{
+	overflow: hidden;
+}
 #globe
 {
-	z-index: -1;
-	position: absolute; 
+	position: fixed; 
 	left: 0px;
 	top: 0px;
 	}
@@ -22,9 +28,32 @@
 #heading  #aarohi{
 	color: #EF4423;
 }
-	#heading  #version {
+#heading  #version {
 	color: #35505F;
+}
+#popup_content
+{
+	margin-top:3em;
+	color:white;
+	text-align:center;
 }
 button{
 	cursor:pointer;
+}
+#social_media{
+	position: fixed;
+	vertical-align: left;
+	margin-top: 6em;
+	padding-left: 1em;
+
+
+}
+#social_media img {
+	width:65px;
+	height:65px;
+		padding :0.4em;
+}
+#social_media img:hover  {
+height:72px;
+width:72px;
 }

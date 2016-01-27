@@ -1,0 +1,109 @@
+<style>
+p{
+    font-weight: lighter;
+    font-size: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: 'helvetica';
+}
+/*musical*/
+#purple{
+    display: block;
+}
+
+#madhur{
+    display: none;
+}
+#rhythmDivine{
+    display: none;
+}
+#swarmanzar{
+    display: none;
+}
+
+#eventImg{
+	width:350px;
+	height:400px;
+	margin-left:20px;
+}
+#eventContent{
+
+}
+.content{
+	display: inline-flex;
+}
+#menu ul{
+	font-family: "FishFingers";
+}
+.active {
+    text-decoration: underline;
+    background-color: #4CAF50;
+     }
+
+
+	#menu
+	{
+		margin: 0px auto;
+	}
+	
+	#menu ul
+	{
+		text-align: center;
+	}
+	
+	#menu li
+	{
+		display: inline-block;
+	}
+	
+	#menu li a, #menu li span
+	{
+		display: inline-block;
+		margin-left: 0.50em;
+		margin: 2em 1.5em 1em 1.5em;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		font-size: 0.90em;
+		font-weight: 600;
+		text-transform: uppercase;
+		outline: 0;
+		color: #FFF;
+	}
+	
+
+</style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="application/javascript">
+        $(document).ready(function() {
+
+            $(window).scroll(function() {
+
+                console.log($(window).scrollTop())
+                if ($(window).scrollTop() > 230) {
+                    $('#menu-wrapper').addClass('navbar-fixed');
+                }
+                if ($(window).scrollTop() < 230) {
+                    $('#menu-wrapper').removeClass('navbar-fixed');
+                }
+            });
+        });
+    </script>
+
+
+<div id="wrapper">
+        <div id="quiz">
+
+            <div class="extra2 container">
+                <div class="ebox1">
+                    <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
+                    <div class="title">
+                        <h1 style="text-align:center; padding-top:20px">Cultural Quiz</h1>
+                        <p class="byline" style="text-align:center; padding-top:20px">'Culture is the tacit agreement to let the means of subsistence disappear behind the purpose of existence. - Karl Kraus'</p>
+                        <p style="text-align:center;"><strong>Aarohi 16 invites all the curious cultural afficionado, that is you, for the cultural quiz.</strong></p>
+                        <p style="text-align:center;"><strong>Culture is art, elevated to a set of beliefs.</strong></p>
+                        <p style="text-align:center;"><strong>Are you a cultural know-it-all? Do you believe that you have a truckload of cultural trivia?</strong></p>
+                        <p class="byline" style="text-align:center;">Then challenge your inQUIZitive mind with this cultural quiz!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,228 @@
+<style>
+    p {
+        font-weight: lighter;
+        font-size: 0.5em;
+        letter-spacing: 0.1em;
+        font-family: 'helvetica';
+    }
+    /*musical*/
+    
+    #purple {
+        display: block;
+    }
+    
+    #madhur {
+        display: none;
+    }
+    
+    #rhythmDivine {
+        display: none;
+    }
+    
+    #swarmanzar {
+        display: none;
+    }
+    
+    #eventImg {
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+    
+    #eventContent {}
+    
+    .content {
+        display: inline-flex;
+    }
+    
+    #menu ul {
+        font-family: "FishFingers";
+    }
+    
+    .active {
+        text-decoration: underline;
+        background-color: #4CAF50;
+    }
+    
+    #menu {
+        margin: 0px auto;
+    }
+    
+    #menu ul {
+        text-align: center;
+    }
+    
+    #menu li {
+        display: inline-block;
+    }
+    
+    #menu li a,
+    #menu li span {
+        display: inline-block;
+        margin-left: 0.50em;
+        margin: 2em 1.5em 1em 1.5em;
+        letter-spacing: 0.20em;
+        text-decoration: none;
+        font-size: 0.90em;
+        font-weight: 600;
+        text-transform: uppercase;
+        outline: 0;
+        color: #FFF;
+    }
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="application/javascript">
+    $(document).ready(function() {
+
+        $(window).scroll(function() {
+
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 230) {
+                $('#menu-wrapper').addClass('navbar-fixed');
+            }
+            if ($(window).scrollTop() < 230) {
+                $('#menu-wrapper').removeClass('navbar-fixed');
+            }
+        });
+    });
+</script>
+
+
+
+<script type="application/javascript">
+    function viewEvent(var1) {
+        document.getElementById('swar').style.display = "none";
+        document.getElementById('rhythmDivine').style.display = "none";
+        document.getElementById('purple').style.display = "none";
+        document.getElementById('madhur').style.display = "none";
+        $('#purpleli').removeClass('active');
+        $('#swarli').removeClass('active');
+        $('#rhythmli').removeClass('active');
+        $('#madhurli').removeClass('active');
+        $('#menu-wrapper').addClass('navbar-fixed');
+        if (var1 == '1') {
+            document.getElementById('purple').style.display = "block";
+            document.title = "Purple Haze";
+            //document.getElementById("purple").scrollIntoView();
+            $('#purpleli').addClass('active');
+
+        }
+        if (var1 == '2') {
+            document.getElementById('swar').style.display = "block";
+            document.title = "Swarmanzar";
+            $('#swarli').addClass('active');
+            //document.getElementById("swar").scrollIntoView();
+        }
+        if (var1 == '3') {
+            document.getElementById('rhythmDivine').style.display = "block";
+            document.title = "Rhythm Divine";
+            $('#rhythmli').addClass('active');
+            //document.getElementById("rhythmDivine").scrollIntoView();
+        }
+        if (var1 == '4') {
+            document.getElementById('madhur').style.display = "block";
+            document.title = "Madhur Antakshari";
+            $('#madhurli').addClass('active');
+            //document.getElementById("madhur").scrollIntoView()
+        }
+
+    }
+</script>
+<div id="menu-wrapper">
+    <nav id="menu">
+        <ul>
+            <li id="purpleli" class="active"><a onclick="viewEvent('1')">Purple Haze</a></li>
+            <li id="swarli"><a onclick="viewEvent('2')">Swarmanzar</a></li>
+            <li id="rhythmli"><a onclick="viewEvent('3')">Rhythm Divine</a></li>
+            <li id="madhurli"><a onclick="viewEvent('4')">Madhur Antakshari</a></li>
+
+        </ul>
+    </nav>
+</div>
+<div id="wrapper">
+    <div id="purple">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
+                <div class="title">
+                    <h1>Purple Haze</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p class="byline" style="text-align:center; padding-top:20px">'Purple Haze' the Rock event of AAROHI gives you a chance to Like, Feel and Live.
+                                <p style="text-align:center;"><strong>The Incessant Rolling Of Drums, Persistent Strum Of Guitars, Deafening Beats and Reverberating Rhythms give you an experience of Soaring Adrenaline Level, Pacing Heart Beats, Dripping Perspiration and Gushing Blood Flow.</strong></p>
+                                <p style="text-align:center;"><strong>Can your beats produce the same fervour?</strong></p>
+                                <p style="text-align:center;"><strong>If yes, then come!</strong></p>
+                                <p style="text-align:center;"><strong>Set the floor on fire!!</strong></p>
+                                <p class="byline" style="text-align:center;">Win exciting prizes!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="swar" style="display:none;">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
+                <div class="title">
+                    <h1>Swarmanzar</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <p class="byline" style="text-align:center; padding-top:20px">'Don't sing just to sound melodious, sing to bewitch the hearts.'</p>
+                            <p style="text-align:center;"><strong>Do you believe that your voice is what it takes to take the crowd to a whole a new dimension of eternal melody?</strong></p>
+                            <p style="text-align:center;"><strong>Here is an imminent opportunity to discover the music maestro in you!</strong></p>
+                            <p style="text-align:center;"><strong><bold>‘Swarmanzar’</bold>-A rendezvous of spellbinding rhythms and enthralling euphony!!</strong></p>
+                            <p style="text-align:center;"><strong>Lose yourself in the symphonies,</strong></p>
+                            <p class="byline" style="text-align:center;">Sing your way to victory!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rhythmDivine">
+        <div class="extra2 container">
+            <div class="ebox1">
+                <div class="title">
+                    <h1>RhythmDivine</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <h1 style="text-align:center; padding-top:20px">Rhythm Divine</h1>
+                            <p class="byline" style="text-align:center; padding-top:20px">'One good thing about music, when it hits you, you feel no pain' - Bob Marley</p>
+                            <p style="text-align:center;"><strong>As we embark on our mission of creating euphoria, we urge you to accompany us in our endeavour of  ' Hakuna Matata' by your brisk instrumental talent.</strong></p>
+                            <p style="text-align:center;"><strong>Ostentate  your skills on ' Rhythm Divine' platform  and let the divinity of your music help the populace to decipher the mystiques of their life and manifest happiness.</strong></p>
+                            <p style="text-align:center;"><strong>From classical to rock and roll, from tabla to violin, the stage anticipates for your skills.</strong></p>
+                            <p class="byline" style="text-align:center;">Lots of prizes to be won!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="madhur">
+
+        <div class="extra2 container">
+            <div class="ebox1">
+                <div class="title">
+                    <h1>Madhur Antakshari</h1>
+                    <div class="content">
+                        <div><img src=" " id="eventImg" /> </div>
+                        <div id="eventContent">
+                            <h1 style="text-align:center; padding-top:20px">Madhur Antakshari</h1>
+                            <p class="byline" style="text-align:center; padding-top:20px">'Every heart sings a song, incomplete, until another heart whispers back. Those who wish to sing always find a song.'</p>
+                            <p style="text-align:center;"><strong>Are you fond of Bollywood songs and have a habit of mumbling them?</strong></p>
+                            <p style="text-align:center;"><strong>Now rejuvenate yourselves and cheer up as Aarohi caters you with the platform of 'Madhur  Antakshari'.  Enjoy in this perfect  and reminiscent atmosphere that will help you to redeem songs from your mind. Obsolete or latest songs, the one having a larger assortment will be the king.</strong></p>
+                            <p class="byline" style="text-align:center;">Lots of exciting goodies to be won.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
