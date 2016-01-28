@@ -1,6 +1,6 @@
 /* Overlay style */
 .overlay {
-	overflow-y:scroll; 
+	overflow-y:scroll;
 	z-index:15;
 	position: fixed;
 	width: 100%;
@@ -26,6 +26,13 @@
 	z-index: 100;
 }
 
+.content{
+  font-family: "Signika";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
 
 /* Effects */
 .overlay-corner {
@@ -58,29 +65,29 @@
 
 .heading{
 	margin-bottom: 1px;
-font-family: 'Helsinki', 'Open Sans';
+  font-family: 'Helsinki', 'Open Sans';
 }
 p{
 	text-align: left;
-    font-weight: lighter;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-    font-family: 'Signika', 'Open Sans';
+  font-weight: lighter;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  font-family: 'Signika', 'Open Sans';
 }
 #purple_haze {
-    display: block;
+  display: block;
 }
 
 #madhur_antakshari {
-    display: none;
+  display: none;
 }
 
 #rhythm_divine {
-    display: none;
+  display: none;
 }
 
 #swarmanzar {
-    display: none;
+  display: none;
 }
 #informals{
 	display: block;
@@ -116,49 +123,49 @@ p{
 	display: none;
 }
 .event_image {
-    width: 400px;
-    height: 300px;
+  width: 400px;
+  height: 300px;
+  display: none;
 }
 
 .event_name{
 	padding-top: 10px;
-    font-family: 'Helsinki';
-    text-align: center;
+  font-family: 'Helsinki';
+  text-align: center;
 }
 /*menu*/
 #menu ul {
-    font-family: "FishFingers";
+  font-family: "FishFingers";
 }
 
 .active {
-    background-color: #4CAF50;
+  background-color: #4CAF50;
 }
 
 #menu {
-	 margin: 0px 0px auto;
+  margin: 0px 0px auto;
 }
 
 #menu ul {
-    text-align: center;
+  text-align: center;
 }
 
 #menu li {
 	min-height: 25px;
 	max-height: 40px;
-    display: inline-block;
+  display: inline-block;
 }
-
 #menu li a,
 #menu li span {
-    display: inline-block;
-    margin-left: 0.50em;
-    margin: 0.1em 1.5em 1em 1.5em;
-    letter-spacing: 0.20em;
-    text-decoration: none;
-    font-size: 0.90em;
-    font-weight: 600;
-    text-transform: uppercase;
-    color:#FFF;
+  display: inline-block;
+  margin-left: 0.50em;
+  margin: 0.1em 1.5em 1em 1.5em;
+  letter-spacing: 0.20em;
+  text-decoration: none;
+  font-size: 0.90em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#FFF;
 }
 .event_content{
 	margin-bottom: 25px;
@@ -166,4 +173,40 @@ p{
 }
 .top-buffer{
 	margin-top:10px;
+}
+.tile
+{
+  height:150px;
+  width: 400px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  opacity: 1;
+}
+#contact_us{
+  margin-top:2em;
+  color:#000;
+}
+#contact_us header{
+  padding-top:0.3em;
+  color:#000;
+}
+.bottom-buffer{
+  margin-bottom: 1em;
+}
+.person_name{
+  font-size: 0.9em;
+  font-family: 'Signika', "Open Sans";
+}
+.contact-heading{
+  padding-top: 0.4em;
+  font-family: 'Helsinki', "Open Sans";
+  font-size: 1em;
+}
+.mail{
+  font-family: 'Signika', "Open Sans";
+  font-size: 0.7em;
+}
+.address_box{
+  padding-top:0.8em;
 }

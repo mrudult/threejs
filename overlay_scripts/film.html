@@ -1,165 +1,162 @@
 
 <script type="application/javascript">
-    function viewEvent(var1) {
-        document.getElementById('film').style.display = "none";
-        document.getElementById('photo').style.display = "none";
-        $('#filmli').removeClass('active');
-        $('#photoli').removeClass('active');
-        if (var1 == '1') {
-            document.getElementById('film').style.display = "block";
-            $('#filmli').addClass('active');
-
-        }
-        else if (var1 == '2') {
-            document.getElementById('photo').style.display = "block";
-            $('#photoli').addClass('active');
-           
-        }
+  function viewEvent(var1) {
+    document.getElementById('film').style.display = "none";
+    document.getElementById('photo').style.display = "none";
+    $('#filmli').removeClass('active');
+    $('#photoli').removeClass('active');
+    if (var1 == '1') {
+      document.getElementById('film').style.display = "block";
+      $('#filmli').addClass('active');
 
     }
+    else if (var1 == '2') {
+      document.getElementById('photo').style.display = "block";
+      $('#photoli').addClass('active');
+
+    }
+
+  }
 </script>
 <div class="container">
-<div class="container-fluid">
+  <div class="container-fluid">
     <nav id="menu">
-        <ul>
-            <li id="filmli" class="active"><a onclick="viewEvent('1')">Film Making</a></li>
-            <li id="photoli"><a onclick="viewEvent('2')">Photography</a></li>
+      <ul>
+        <li id="filmli" class="active"><a onclick="viewEvent('1')">Film Making</a></li>
+        <li id="photoli"><a onclick="viewEvent('2')">Photography</a></li>
 
 
-        </ul>
+      </ul>
     </nav>
-</div>
+  </div>
 
-<div class="containe-fluid top-buffer">
+  <div class="containe-fluid top-buffer">
     <div id="film">
-        <h1 class="event_name">Film Making</h1>
-        <br>
-        <div class="event_content">
+      <h1 class="event_name">Film Making</h1>
+      <br>
+      <div class="event_content">
         <div class="row top-buffer">
-            <div class="col-sm-5">
-                <img class="event_image" src="images/swarmanzar.png">
+        <div class="col-sm-12">
+           <div id="intro">
+            <p>                    "Every child is an artist. The problem is how to remain an artist once we grow up. - Pablo Picasso."</p>
+
+            <p>                This February, unleash the artist within you. Break free from the shackles of boredom and tap into the brilliant moral part of your being to reproduce your thoughts in arts and images.</p>
+
+            <p>Art gives us a chance to not only experience but also express the beauty that mother nature beholds.
+
+              Now the time has come, to awaken the artist within you. Abandon your worries at the threshold of your house and come participate in this hunt for the modern day Picasso.</p>
             </div>
-                <div class="col-sm-7">
-                     <div id="intro">
-<p>                    "Every child is an artist. The problem is how to remain an artist once we grow up. - Pablo Picasso."</p>
-
-    <p>                This February, unleash the artist within you. Break free from the shackles of boredom and tap into the brilliant moral part of your being to reproduce your thoughts in arts and images.</p>
-
-                    <p>Art gives us a chance to not only experience but also express the beauty that mother nature beholds.
-
-                    Now the time has come, to awaken the artist within you. Abandon your worries at the threshold of your house and come participate in this hunt for the modern day Picasso.</p>
-                     </div>
-                </div>
+          </div>
         </div>
         <br>
         <div class="row top-buffer">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+           <h2 class="heading">Prizes</h2>
+           <p>
+            Win lots of goodies!
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="row top-buffer">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
-                 <h2 class="heading">Prizes</h2>
-                 <p>
-                    Win lots of goodies!
-                 </p>
+          <h2 class="heading">Contact</h2>
         </div>
-        </div>
-        <br>
-        <div class="row top-buffer">
         <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-                <h2 class="heading">Contact</h2>
-                </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-5">
-                 <p>
-                 Jeetu
-                 </p>
-                 <p>
-                 +91 8600084806
-                 </p>
-                 </div>
-                <div class="col-sm-5">
-                 <p>
-                 Sachin
-                 </p>
-                 <p>
-                 +91 8390770780
-                 </p>
-                 </div>
-        </div>
-        <br>
-        <div class="row top-buffer">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
+        <div class="col-sm-5">
+         <p>
+           Jeetu
+         </p>
+         <p>
+           +91 8600084806
+         </p>
+       </div>
+       <div class="col-sm-5">
+         <p>
+           Sachin
+         </p>
+         <p>
+           +91 8390770780
+         </p>
+       </div>
+     </div>
+     <br>
+     <div class="row top-buffer">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
         <h2 class="heading"> Timing</h2>
         <p>Schedule will be updated soon</p>
-        </div>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
+<div id="photo">
+ <h1 class="event_name">Photography</h1>
+ <br>
+ <div class="event_content">
+  <div class="row top-buffer">
+    <div class="col-sm-5">
+      <img class="event_image" src="images/swarmanzar.png">
     </div>
-    <div id="photo">
-         <h1 class="event_name">Photography</h1>
-         <br>
-        <div class="event_content">
-        <div class="row top-buffer">
-            <div class="col-sm-5">
-                <img class="event_image" src="images/swarmanzar.png">
-            </div>
-                <div class="col-sm-7">
-                     <div id="intro">
-                     
-                    <p>"You don't take a photograph, you make it." - Ansel Adams</p>
+    <div class="col-sm-7">
+     <div id="intro">
 
-                    <p>We bring you an escape from the worries of your everyday life.
-                    Come carefree and immerse yourself in this search for enthralling beauty and impress us with your ability to capture the colours of this world!</p>
-                    <p>For the photography enthusiasts, Aarohi 16 presents the photography contest.</p>
+      <p>"You don't take a photograph, you make it." - Ansel Adams</p>
 
-                     </div>
-                </div>
-        </div>
-        <br>
-        <div class="row top-buffer">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-                 <h2 class="heading">Prizes</h2>
-                 <p>
-                   Win lots of goodies!!
-                 </p>
-        </div>
-        </div>
-        <br>
-        <div class="row top-buffer">
-        <div class="col-sm-2"></div>
-                <div class="row top-buffer">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-                <h2 class="heading">Contact</h2>
-                </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-5">
-                 <p>
-                 Jeetu
-                 </p>
-                 <p>
-                 +91 8600084806
-                 </p>
-                 </div>
-                <div class="col-sm-5">
-                 <p>
-                 Sachin
-                 </p>
-                 <p>
-                 +91 8390770780
-                 </p>
-                 </div>
-        </div>
-        <br>
-        <div class="row top-buffer">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-        <h2 class="heading"> Timing</h2>
-        <p> Schedule will be updated soon</p>
-        </div>
-        </div>
+      <p>We bring you an escape from the worries of your everyday life.
+        Come carefree and immerse yourself in this search for enthralling beauty and impress us with your ability to capture the colours of this world!</p>
+        <p>For the photography enthusiasts, Aarohi 16 presents the photography contest.</p>
+
+      </div>
     </div>
+  </div>
+  <br>
+  <div class="row top-buffer">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+     <h2 class="heading">Prizes</h2>
+     <p>
+       Win lots of goodies!!
+     </p>
+   </div>
+ </div>
+ <br>
+ <div class="row top-buffer">
+  <div class="col-sm-2"></div>
+  <div class="row top-buffer">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <h2 class="heading">Contact</h2>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5">
+     <p>
+       Jeetu
+     </p>
+     <p>
+       +91 8600084806
+     </p>
+   </div>
+   <div class="col-sm-5">
+     <p>
+       Sachin
+     </p>
+     <p>
+       +91 8390770780
+     </p>
+   </div>
+ </div>
+ <br>
+ <div class="row top-buffer">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-10">
+    <h2 class="heading"> Timing</h2>
+    <p> Schedule will be updated soon</p>
+  </div>
+</div>
+</div>
 </div>
 
 

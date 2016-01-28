@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: FishFingers;
+            src: url(./css/font/Fishfingers.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: Helsinki;
+            src: url(./css/font/helsinki.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        * {
+            color: #fff;
+        }
+        
+        a {
+            font-family: FishFingers;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: Helsinki;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        body {
+            background-image: url("skytile.gif");
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <link href="css/nanogallery.css" rel="stylesheet" type="text/css">
+    <link href="css/nanogallery_clean.css" rel="stylesheet" type="text/css">
+    <link href="css/nanogallery_light.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.nanogallery.js"></script>
+    <script>
+        $(document).ready(function() {
+            var contentGalleryMLN = [{
+                src: 'img/cycle_logo.png',
+                srct: 'img/cycle_logo.png',
+                title: 'Cycle Rally',
+                ID: 1,
+                kind: 'album'
+            }, {
+                src: 'img/social/so4_title.png',
+                srct: 'img/social/so4_title.png',
+                title: 'Social Initiative',
+                ID: 2,
+                kind: 'album'
+            }, {
+                src: 'img/social/so2.png',
+                srct: 'img/social/so2.png',
+                title: '',
+                ID: 213,
+                albumID: 2
+            }, {
+                src: 'img/social/so3.png',
+                srct: 'img/social/so3.png',
+                title: '',
+                ID: 214,
+                albumID: 2
+            }, {
+                src: 'img/social/so4.png',
+                srct: 'img/social/so4.png',
+                title: '',
+                ID: 215,
+                albumID: 2
+            }, {
+                src: 'img/social/so5.png',
+                srct: 'img/social/so5.png',
+                title: '',
+                ID: 216,
+                albumID: 2
+            },
+                                    {src: 'img/cycle_rally/dsc_0055.jpg' ,srct: 'img/cycle_rally/dsc_0055.jpg', title: '', ID: 4, albumID:1},
+{src: 'img/cycle_rally/dsc_0081.jpg' ,srct: 'img/cycle_rally/dsc_0081.jpg', title: '', ID: 5, albumID:1},
+{src: 'img/cycle_rally/dsc_0095.jpg' ,srct: 'img/cycle_rally/dsc_0095.jpg', title: '', ID: 6, albumID:1},
+{src: 'img/cycle_rally/dsc_0205.jpg' ,srct: 'img/cycle_rally/dsc_0205.jpg', title: '', ID: 7, albumID:1},
+{src: 'img/cycle_rally/dsc_0405.jpg' ,srct: 'img/cycle_rally/dsc_0405.jpg', title: '', ID: 8, albumID:1},
+{src: 'img/cycle_rally/dsc_0424.jpg' ,srct: 'img/cycle_rally/dsc_0424.jpg', title: '', ID: 9, albumID:1},
+{src: 'img/cycle_rally/dsc_0501.jpg' ,srct: 'img/cycle_rally/dsc_0501.jpg', title: '', ID: 10, albumID:1},
+{src: 'img/cycle_rally/dsc_1145.jpg' ,srct: 'img/cycle_rally/dsc_1145.jpg', title: '', ID: 11, albumID:1},
+{src: 'img/cycle_rally/dsc_1173.jpg' ,srct: 'img/cycle_rally/dsc_1173.jpg', title: '', ID: 12, albumID:1},
+{src: 'img/cycle_rally/dsc_1258.jpg' ,srct: 'img/cycle_rally/dsc_1258.jpg', title: '', ID: 13, albumID:1},
+{src: 'img/cycle_rally/img_2237.jpg' ,srct: 'img/cycle_rally/img_2237.jpg', title: '', ID: 14, albumID:1},
+{src: 'img/cycle_rally/img_2267.jpg' ,srct: 'img/cycle_rally/img_2267.jpg', title: '', ID: 15, albumID:1},
+{src: 'img/cycle_rally/img_2280.jpg' ,srct: 'img/cycle_rally/img_2280.jpg', title: '', ID: 16, albumID:1},
+{src: 'img/cycle_rally/img_2452.jpg' ,srct: 'img/cycle_rally/img_2452.jpg', title: '', ID: 17, albumID:1},
+{src: 'img/cycle_rally/img_2596.jpg' ,srct: 'img/cycle_rally/img_2596.jpg', title: '', ID: 18, albumID:1}];
+
+            jQuery("#nanoGalleryMLN").nanoGallery({
+                thumbnailWidth: 200,
+                thumbnailHeight: 200,
+                items: contentGalleryMLN,
+                paginationMaxItemsPerPage: 3,
+                paginationMaxLinesPerPage: 1,
+                thumbnailHoverEffect: 'imageScale150',
+                viewerDisplayLogo: true,
+                useTags: false,
+                locationHash: false,
+                breadcrumbAutoHideTopLevel: true,
+                maxItemsPerLine: 5,
+                locationHash: false,
+                paginationDots: true,
+                itemsBaseURL: ''
+            });
+
+            jQuery('#btnPaginationCount').on('click', function() {
+                alert(jQuery('#nanoGalleryMLN').nanoGallery('paginationCountPages'));
+            });
+            jQuery('#btnPaginationNext').on('click', function() {
+                jQuery('#nanoGalleryMLN').nanoGallery('paginationNextPage');
+            });
+            jQuery('#btnPaginationPrevious').on('click', function() {
+                jQuery('#nanoGalleryMLN').nanoGallery('paginationPreviousPage');
+            });
+            jQuery('#btnPaginationGoto').on('click', function() {
+                jQuery('#nanoGalleryMLN').nanoGallery('paginationGotoPage', 2);
+            });
+
+        });
+    </script>
+</head>
+
+<body style="background:#1B1111 none repeat scroll 0% 0%">
+    <table width="100%">
+        <tr>
+            <td style="width: 20%; padding-left: 5%;">
+                <a href="http://www.aarohiworld.com"><img src="img/logo_color.png" style=" padding-left: 5%; padding-top:15%" width="150   px" height="150 px"></a>
+            </td>
+            <td>
+                <br>
+                <br>
+                <h1>GALLERY</h1>
+                <br>
+            </td>
+            <td style="width: 20%; padding-left: 5%;"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div id="nanoGalleryMLN"></div>
+</body>
+
+</html>

@@ -1,1 +1,88 @@
-<h1 style="color:white;"> contact us</h1>
+<script type="application/javascript">
+    function viewEvent(var1) {
+        document.getElementById('contact_us').style.display = "none";
+
+        $('#contact_usli').removeClass('active');
+        if (var1 == '1') {
+            document.getElementById('contact_us').style.display = "block";
+            $('#contact_usli').addClass('active');
+
+        }
+      }
+</script>
+<div class="container">
+<div class="container-fluid">
+    <nav id="menu">
+        <ul>
+            <li id="contact_usli" class="active"><a onclick="viewEvent('1')">Get in touch!</a></li>
+
+
+        </ul>
+    </nav>
+</div>
+
+<div class="container-fluid top-buffer">
+    <div id="contact_us">
+    <div class="container-fluid">
+          <div class="row padded">
+            <div class="col-sm-5 col-sm-offset-1 col-md-offset-1 tile">
+              <h2 class="contact-heading">
+                President
+              </h2>
+              <address class="address_box">
+                <h4 class="person_name">Tanmay Khandelwal</h4>
+                <div class="mail">
+                <a href="tanmay.khandelwal%40aarohiworld.html">tanmay.khandelwal@aarohiworld.com</a><br>
+                 +91 9096651055<br>
+                <br>
+                </div>
+              </address>
+            </div>
+         
+            <div class="col-sm-5 col-sm-offset-1 col-md-offset-1 tile">
+              <h2 class="contact-heading">
+                Vice President
+              </h2>
+              <address  class="address_box">
+                <h4 class="person_name">Sanskar Jhanwar</h4>
+                <div class="mail"> <a href="mailto:sanskar.jhanwar@aarohiworld.com">sanskar.jhanwar@aarohiworld.com</a><br>
+                +91 9403929675<br>
+                <br>
+                </div>
+              </address>
+            </div>
+          </div>
+          <div class="row bottom-buffer">
+            <div class="col-sm-5 col-sm-offset-1 col-md-offset-1 tile">
+              <h2 class="contact-heading">
+                Vice President
+             </h2>
+              <address  class="address_box">
+                <h4 class="person_name">Aayushi Srivastava</h4>
+                <div class="mail">
+                <a href="mailto:aayushi.srivastava@aarohiworld.com">aayushi.srivastava@aarohiworld.com</a><br>
+                +91 7798134588<br>
+                <br>
+                </div>
+              </address>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1 col-md-offset-1 tile">
+              <h2 class="contact-heading">
+                Treasurer
+              </h2>
+              <address  class="address_box">
+                <h4 class="person_name">Shubham Kene</h4>
+                <div class="mail">
+                <a href="mailto:shubham.kene@aarohiworld.com">shubham.kene@aarohiworld.com</a>
+                <br>
+                +91 9405898467<br>
+                <br>
+                </div>
+              </address>
+            </div>
+          </div>
+          </div>
+       
+    </div>
+
+</div>
