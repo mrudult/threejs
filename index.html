@@ -140,9 +140,7 @@
 		THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
 			if (loaded == total) {
 				console.log("Hurray!");
-				setTimeout(function(){
-	    		$("#loader").delay('1000').fadeOut('slow');
-	    	}, 1000);
+				setTimeout(function(){$("#loader").delay('1000').fadeOut('slow')}, 1000);
 			};
 		};
 		if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
