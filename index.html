@@ -25,7 +25,9 @@
   <script>
 		// Wait for window load
 		$(window).load(function() {
-			setTimeout(function(){$("#loader").fadeOut('slow');}, 1000);
+			setTimeout(function(){
+        $("#loader").delay('3000').fadeOut('slow');
+      }, 1000);
 		});
 	</script>
 	<style>
