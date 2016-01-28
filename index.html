@@ -24,7 +24,7 @@
     };
     $(window).load(function() {
      setTimeout(function(){
-      $("#loader").delay('1000').fadeOut('slow');
+      $("#loader").delay('10000').fadeOut('slow');
     }, 1000);
    });
   </script>
@@ -32,9 +32,7 @@
    a:hover{
     text-decoration: none;
   }
-  #globe{
-    cursor:pointer;
-  }
+
 </style>
 </head>
 <body id ="main-content">
@@ -51,7 +49,7 @@
      <ul class="cd-main-nav">
 
       <li>
-        <a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )"> About us</a>
+        <a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )">About us</a>
       </li>
       <li>
         <a onclick="gotoGlobeMenu(globe_menu.get('proshow').x , globe_menu.get('proshow').z )">Proshow</a>
@@ -60,7 +58,7 @@
         <a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
       </li>
       <li>
-        <a target="_blank" href="gallery/gallery.html">Social Initiatives</a>
+        <a target="_blank" href="social_initiative/gallery.html">Social Initiatives</a>
       </li>
       <li>
         <a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )">Contact Us</a>
@@ -116,11 +114,15 @@
 	<a target="_blank" href="http://www.instagram.com/aarohi_vnitnagpur"><img src="images/social_media/instagram.png"></a><br>
 	<a target="_blank" href="http://www.youtube.com/VNITAarohi"><img src="images/social_media/youtube.png"></a>
 </div>
+<div id="rulebook">
+
+<img src="img/rulebook.png">
+</div>
 <div class="col-sm-4 col-xs-12" id="main_logo">
   <img src="img/logo.png" class="img-responsive">
 </div>
 <div id="dates">
-  <p>26<sup>th</sup> - 28<sup>th</sup><span id="month"> February</span></p>
+  <p>26<sup>th</sup> - 28<sup>th</sup><span id="month"> February</span> 2016</p>
 </div>
 <main class="cd-main-content">
   <!-- main content here -->
@@ -161,7 +163,7 @@
 	var rotWorldMatrix,rotObjectMatrix, rotWorldMatrix, rotation_matrix, camera, scene, renderer, objects, skyBox, globe, parent;
 
 	// menu item variables
-	var contact_us, sponsors, film, guitar, informals, proshow, art, cn, quiz, drama, sun_element, trees, about_us, personality, dance;
+	var contact_us, sponsors, film, guitar, informals, proshow, art, cn, quiz, drama, sun_element, trees, about_us, personality, dance, plane;
 
 	// for mouse hover
 	var canvas1, context1,sprite1,texture1,mouse=new THREE.Vector3();
@@ -273,6 +275,8 @@
    } );
 
 		// menu items for globe ---------------------------------------------------------------------------
+       jsonLoader = new THREE.JSONLoader();
+
 		jsonLoader.load( "models/menu_items/Filmography.js", function (geometry,materials)
 		{
 			var material = new THREE.MeshFaceMaterial( materials );
@@ -289,7 +293,7 @@
 			dance.scale.set(0.020,0.020,0.020);
 			parent.add(dance);
 		} );
-		jsonLoader.load( "models/menu_items/Personality.js", function (geometry,materials)
+		jsonLoader.load( "models/menu_items/Person.js", function (geometry,materials)
 		{
 			var material = new THREE.MeshFaceMaterial( materials );
 			personality = new THREE.Mesh( geometry, material );
@@ -450,6 +454,7 @@
 
  function gotoGlobeMenu(x_desired,z_desired)
  {
+
   new TWEEN.Tween(globe.rotation).to( {x: x_desired , z : z_desired},1200 ).easing(TWEEN.Easing.Elastic.Out).start();
   new TWEEN.Tween(parent.rotation).to( {x: x_desired , z : z_desired},1200).easing(TWEEN.Easing.Elastic.Out).start();
 			//

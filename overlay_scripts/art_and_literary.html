@@ -1,162 +1,167 @@
 
 <script type="application/javascript">
-  function viewEvent(var1) {
-    document.getElementById('film').style.display = "none";
-    document.getElementById('literary').style.display = "none";
-    $('#artli').removeClass('active');
-    $('#literaryli').removeClass('active');
-    if (var1 == '1') {
-      document.getElementById('film').style.display = "block";
-      $('#artli').addClass('active');
+    function viewEvent(var1) {
+        document.getElementById('film').style.display = "none";
+        document.getElementById('literary').style.display = "none";
+        $('#artli').removeClass('active');
+        $('#literaryli').removeClass('active');
+        if (var1 == '1') {
+            document.getElementById('film').style.display = "block";
+            $('#artli').addClass('active');
+
+        }
+        else if (var1 == '2') {
+            document.getElementById('literary').style.display = "block";
+            $('#literaryli').addClass('active');
+           
+        }
 
     }
-    else if (var1 == '2') {
-      document.getElementById('literary').style.display = "block";
-      $('#literaryli').addClass('active');
-
-    }
-
-  }
 </script>
 <div class="container">
-  <div class="container-fluid">
+<div class="container-fluid">
     <nav id="menu">
-      <ul>
-        <li id="artli" class="active"><a onclick="viewEvent('1')">Art Conoscenza</a></li>
-        <li id="literaryli"><a onclick="viewEvent('2')">Literary</a></li>
-      </ul>
+        <ul>
+            <li id="artli" class="active"><a onclick="viewEvent('1')">Art Conoscenza</a></li>
+            <li id="literaryli"><a onclick="viewEvent('2')">Literary</a></li>
+
+
+        </ul>
     </nav>
-  </div>
+</div>
 
-  <div class="containe-fluid top-buffer">
+<div class="containe-fluid top-buffer">
     <div id="film">
-      <h1 class="event_name">Art Conoscenza</h1>
-      <br>
-      <div class="event_content">
+        <h1 class="event_name">Art Conoscenza</h1>
+        <br>
+        <div class="event_content">
         <div class="row top-buffer">
-          <div class="col-sm-12">
-           <div id="intro">
-            <p>                    "Every child is an artist. The problem is how to remain an artist once we grow up. - Pablo Picasso."</p>
-
-            <p>                This February, unleash the artist within you. Break free from the shackles of boredom and tap into the brilliant moral part of your being to reproduce your thoughts in arts and images.</p>
-
-            <p>Art gives us a chance to not only experience but also express the beauty that mother nature beholds.
-
-              Now the time has come, to awaken the artist within you. Abandon your worries at the threshold of your house and come participate in this hunt for the modern day Picasso.</p>
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/art.jpg">
             </div>
-          </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+<p>                    "Every child is an artist. The problem is how to remain an artist once we grow up. - Pablo Picasso."</p>
+
+    <p>                This February, unleash the artist within you. Break free from the shackles of boredom and tap into the brilliant moral part of your being to reproduce your thoughts in arts and images.</p>
+
+                    <p>Art gives us a chance to not only experience but also express the beauty that mother nature beholds.
+
+                    Now the time has come, to awaken the artist within you. Abandon your worries at the threshold of your house and come participate in this hunt for the modern day Picasso.</p>
+                     </div>
+                </div>
         </div>
         <br>
         <div class="row top-buffer">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-10">
-           <h2 class="heading">Prizes</h2>
-           <p>
-            Win lots of goodies!
-          </p>
-        </div>
-      </div>
-      <br>
-      <div class="row top-buffer">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
-          <h2 class="heading">Contact</h2>
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Win lots of goodies!
+                 </p>
         </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
         <div class="col-sm-2"></div>
-        <div class="col-sm-5">
-         <p>
-           Ankit
-         </p>
-         <p>
-           +91 9561075904
-         </p>
-       </div>
-       <div class="col-sm-5">
-         <p>
-           Ishwary
-         </p>
-         <p>
-           +91 9403026369
-         </p>
-       </div>
-     </div>
-     <br>
-     <div class="row top-buffer">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-10">
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Ankit
+                 </p>
+                 <p>
+                 +91 9561075904
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Ishwary
+                 </p>
+                 <p>
+                 +91 9403026369
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
         <h2 class="heading"> Timing</h2>
         <p>Schedule will be updated soon</p>
-      </div>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
-<div id="literary">
- <h1 class="event_name">Literary</h1>
- <br>
- <div class="event_content">
-  <div class="row top-buffer">
-    <div class="col-sm-5">
-      <img class="event_image" src="images/swarmanzar.png">
     </div>
-    <div class="col-sm-7">
-     <div id="intro">
+    <div id="literary">
+         <h1 class="event_name">Literary</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/lit.jpg">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                     
+                    <p>"You don't take a literarygraph, you make it." - Ansel Adams</p>
 
-      <p>"You don't take a literarygraph, you make it." - Ansel Adams</p>
+                    <p>We bring you an escape from the worries of your everyday life.
+                    Come carefree and immerse yourself in this search for enthralling beauty and impress us with your ability to capture the colours of this world!</p>
+                    <p>For the literarygraphy enthusiasts, Aarohi 16 presents the literarygraphy contest.</p>
 
-      <p>We bring you an escape from the worries of your everyday life.
-        Come carefree and immerse yourself in this search for enthralling beauty and impress us with your ability to capture the colours of this world!</p>
-        <p>For the literarygraphy enthusiasts, Aarohi 16 presents the literarygraphy contest.</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                   Win lots of goodies!!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+                <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Rohit
+                 </p>
+                 <p>
+                 +91 8551042078
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Chinmay
+                 </p>
+                 <p>
+                 +91 7798576043
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon</p>
+        </div>
+        </div>
+    </div>
+</div>
 
-      </div>
-    </div>
-  </div>
-  <br>
-  <hr>
-  <div class="row top-buffer">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-     <h2 class="heading">Prizes</h2>
-     <p>
-       Win lots of goodies!!
-     </p>
-   </div>
- </div>
- <hr>
- <br>
- <div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="row top-buffer">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-      <h2 class="heading">Contact</h2>
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5">
-     <p>
-       Rohit
-     </p>
-     <p>
-       +91 8551042078
-     </p>
-   </div>
-   <div class="col-sm-5">
-     <p>
-       Chinmay
-     </p>
-     <p>
-       +91 7798576043
-     </p>
-   </div>
- </div>
- <br>
- <div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-    <h2 class="heading"> Timing</h2>
-    <p> Schedule will be updated soon</p>
-  </div>
-</div>
-</div>
-</div>
+
 </div>
 </div>

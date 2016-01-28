@@ -1,171 +1,176 @@
 
 <script type="application/javascript">
-  function viewEvent(var1) {
-    document.getElementById('halla_bol').style.display = "none";
-    document.getElementById('abhi').style.display = "none";
-    $('#hallali').removeClass('active');
-    $('#abhili').removeClass('active');
-    if (var1 == '1') {
-      document.getElementById('halla_bol').style.display = "block";
-      $('#hallali').addClass('active');
+    function viewEvent(var1) {
+        document.getElementById('halla_bol').style.display = "none";
+        document.getElementById('abhi').style.display = "none";
+        $('#hallali').removeClass('active');
+        $('#abhili').removeClass('active');
+        if (var1 == '1') {
+            document.getElementById('halla_bol').style.display = "block";
+            $('#hallali').addClass('active');
+
+        }
+        else if (var1 == '2') {
+            document.getElementById('abhi').style.display = "block";
+            $('#abhili').addClass('active');
+           
+        }
 
     }
-    else if (var1 == '2') {
-      document.getElementById('abhi').style.display = "block";
-      $('#abhili').addClass('active');
-
-    }
-
-  }
 </script>
 <div class="container">
-  <div class="container-fluid">
+<div class="container-fluid">
     <nav id="menu">
-      <ul>
-        <li id="hallali" class="active"><a onclick="viewEvent('1')">Street Play</a></li>
-        <li id="abhili"><a onclick="viewEvent('2')">Stage Play</a></li>
-      </ul>
+        <ul>
+            <li id="hallali" class="active"><a onclick="viewEvent('1')">Street Play</a></li>
+            <li id="abhili"><a onclick="viewEvent('2')">Stage Play</a></li>
+
+
+        </ul>
     </nav>
-  </div>
+</div>
 
-  <div class="container-fluid top-buffer">
-
+<div class="container-fluid top-buffer">
+    
     <div id="halla_bol">
-      <h1 class="event_name">Halla Bol</h1>
-      <br>
-      <div class="event_content">
+        <h1 class="event_name">Halla Bol</h1>
+        <br>
+        <div class="event_content">
         <div class="row top-buffer">
-          <div class="col-sm-12">
-           <div id="intro">
-            <p>
-              Ruthless master is not the culprit but the dumb slave is!</p>
-              <p>
-                Now it is the time to raise your voice against the evil and send it back to its den. It is the time to redeem your happiness.<p> Are your words and actions loud enough to energize even the dullest?</p>
-              </p><p>
-              Hallabol, a street play competition wherein you can display your ingenious acting skills.
-            </p><p>
-            Let you your mask turn down the injustice!
-          </p>
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/drama.jpg">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                    <p>
+                    Ruthless master is not the culprit but the dumb slave is!</p>
+                    <p>
+                    Now it is the time to raise your voice against the evil and send it back to its den. It is the time to redeem your happiness.<p> Are your words and actions loud enough to energize even the dullest?</p>
+                    </p><p>
+                    Hallabol, a street play competition wherein you can display your ingenious acting skills.
+                    </p><p>
+                    Let you your mask turn down the injustice!
+                    </p>
+                     </div>
+                </div>
         </div>
-      </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Win lots of goodies!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Prathmesh
+                 </p>
+                 <p>
+                 +91 9579207408
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Priyanka
+                 </p>
+                 <p>
+                 +91 9422323929
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p>Schedule will be updated soon</p>
+        </div>
+        </div>
     </div>
-    <br>
-    <div class="row top-buffer">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-10">
-       <h2 class="heading">Prizes</h2>
-       <p>
-        Win lots of goodies!
-      </p>
     </div>
-  </div>
-  <br>
-  <div class="row top-buffer">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-      <h2 class="heading">Contact</h2>
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5">
-     <p>
-       Prathmesh
-     </p>
-     <p>
-       +91 9579207408
-     </p>
-   </div>
-   <div class="col-sm-5">
-     <p>
-       Priyanka
-     </p>
-     <p>
-       +91 9422323929
-     </p>
-   </div>
- </div>
- <br>
- <div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-    <h2 class="heading"> Timing</h2>
-    <p>Schedule will be updated soon</p>
-  </div>
-</div>
-</div>
-</div>
-<div id="abhi">
- <h1 class="event_name">Abhivyakti</h1>
- <br>
- <div class="event_content">
-  <div class="row top-buffer">
-    <div class="col-sm-5">
-      <img class="event_image" src="images/swarmanzar.png">
-    </div>
-    <div class="col-sm-7">
-     <div id="intro">
+    <div id="abhi">
+         <h1 class="event_name">Abhivyakti</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/stage.jpg">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
 
-      <p>
-        “Life is a drama,
-        A Play Of Memories,
-        Surfeit Of Tragedies And Comedies,
-        A Metaphor Of Enigma!”
-      </p><p>
-      Time has come to obliterate the agony that devours us and joins the fun regime!</p>
-      <p>
-        Cast away the gloomy countenances, Put on the fun mask, Shout out loud:
-        ‘HAKUNA MATATA!’
-      </p><p>
-      AAROHI 16 presents dramatics event Abhivyakti
-      A Cause For Applause,
-      Where you Express To Impress,
-      To Scatter Joy And Shatter Pain!!
-      Draft your script, Devise your play, Let the spectators behold the mesmerizing blend of fantasy with reality!!</p>
+                        <p>
+                        “Life is a drama,
+                        A Play Of Memories,
+                        Surfeit Of Tragedies And Comedies,
+                        A Metaphor Of Enigma!”
+                        </p><p>
+                        Time has come to obliterate the agony that devours us and joins the fun regime!</p>
+                        <p>
+                        Cast away the gloomy countenances, Put on the fun mask, Shout out loud:
+                        ‘HAKUNA MATATA!’
+                        </p><p>
+                        AAROHI 16 presents dramatics event Abhivyakti
+                        A Cause For Applause,
+                        Where you Express To Impress,
+                        To Scatter Joy And Shatter Pain!!
+                        Draft your script, Devise your play, Let the spectators behold the mesmerizing blend of fantasy with reality!!</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                   Prizes worth 10k!!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Prathmesh
+                 </p>
+                 <p>
+                 +91 9579207408
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Priyanka
+                 </p>
+                 <p>
+                 +91 9422323929
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon</p>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
-<br>
-<div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-   <h2 class="heading">Prizes</h2>
-   <p>
-     Prizes worth 10k!!
-   </p>
- </div>
-</div>
-<br>
-<div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-    <h2 class="heading">Contact</h2>
-  </div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-5">
-   <p>
-     Prathmesh
-   </p>
-   <p>
-     +91 9579207408
-   </p>
- </div>
- <div class="col-sm-5">
-   <p>
-     Priyanka
-   </p>
-   <p>
-     +91 9422323929
-   </p>
- </div>
-</div>
-<br>
-<div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-    <h2 class="heading"> Timing</h2>
-    <p> Schedule will be updated soon</p>
-  </div>
-</div>
-</div>
 </div>
 
 

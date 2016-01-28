@@ -1,163 +1,171 @@
+
 <script type="application/javascript">
-  function viewEvent(var1) {
-    document.getElementById('cynosure').style.display = "none";
-    document.getElementById('big_fight').style.display = "none";
-    $('#cynoli').removeClass('active');
-    $('#big_fightli').removeClass('active');
-    if (var1 == '1') {
-      document.getElementById('cynosure').style.display = "block";
-      $('#cynoli').addClass('active');
+    function viewEvent(var1) {
+        document.getElementById('cynosure').style.display = "none";
+        document.getElementById('big_fight').style.display = "none";
+        $('#cynoli').removeClass('active');
+        $('#big_fightli').removeClass('active');
+        if (var1 == '1') {
+            document.getElementById('cynosure').style.display = "block";
+            $('#cynoli').addClass('active');
+
+        }
+        else if (var1 == '2') {
+            document.getElementById('big_fight').style.display = "block";
+            $('#big_fightli').addClass('active');
+           
+        }
+
     }
-    else if (var1 == '2') {
-      document.getElementById('big_fight').style.display = "block";
-      $('#big_fightli').addClass('active');
-    }
-  }
 </script>
 <div class="container">
-  <div class="container-fluid">
+<div class="container-fluid">
     <nav id="menu">
-      <ul>
-        <li id="cynoli" class="active"><a onclick="viewEvent('1')">Personality Contest</a></li>
-        <li id="big_fightli"><a onclick="viewEvent('2')">Debate</a></li>
-      </ul>
+        <ul>
+            <li id="cynoli" class="active"><a onclick="viewEvent('1')">Personality Contest</a></li>
+            <li id="big_fightli"><a onclick="viewEvent('2')">Debate</a></li>
+
+
+        </ul>
     </nav>
-  </div>
-  <div class="containe-fluid top-buffer">
+</div>
+
+<div class="containe-fluid top-buffer">
     <div id="cynosure">
-      <h1 class="event_name">Cynosure</h1>
-      <br>
-      <div class="event_content">
+        <h1 class="event_name">Cynosure</h1>
+        <br>
+        <div class="event_content">
         <div class="row top-buffer">
-          <div class="col-sm-5">
-            <img class="event_image" src="images/swarmanzar.png">
-          </div>
-          <div class="col-sm-7">
-           <div id="intro"><p>
-            ‘Consolidate The Fervor, Ye Who Enter Here!</p>
-            <p>Gates are open wide, The Bravest Shall Pass!!
-              A Quest To Discover, the Indomitable Spirit Within You’</p>
-              <br>
-              <p>‘CYNOSURE’ is a platform to realize your inner strength, where your valour would be tested against the ferocious crowd of VNIT!</p>
-              <p>
-                Summon all your courage,
-                Take a step inside,
-                Impress the populace by your persona!
-                Only one mantra:
-                ‘Only brave and witty one rules!!’
-              </p><p>
-              Come to Cynosure 2016!!!</p>
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/cyno.jpg">
             </div>
-          </div>
+                <div class="col-sm-7">
+                     <div id="intro"><p>
+                            ‘Consolidate The Fervor, Ye Who Enter Here!</p>
+                            <p>Gates are open wide, The Bravest Shall Pass!!
+                            A Quest To Discover, the Indomitable Spirit Within You’</p>
+                            <br>
+                            <p>‘CYNOSURE’ is a platform to realize your inner strength, where your valour would be tested against the ferocious crowd of VNIT!</p>
+                            <p>
+                            Summon all your courage,
+                            Take a step inside,
+                            Impress the populace by your persona!
+
+                            Only one mantra:
+                            ‘Only brave and witty one rules!!’
+                            </p><p>
+                            Come to Cynosure 2016!!!</p>
+                     </div>
+                </div>
         </div>
         <br>
         <div class="row top-buffer">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-10">
-           <h2 class="heading">Prizes</h2>
-           <p>
-            Win lots of goodies!
-          </p>
-        </div>
-      </div>
-      <br>
-      <div class="row top-buffer">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
-          <h2 class="heading">Contact</h2>
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Win lots of goodies!
+                 </p>
         </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
         <div class="col-sm-2"></div>
-        <div class="col-sm-5">
-         <p>
-           Abhay
-         </p>
-         <p>
-           +91 8600761832
-         </p>
-       </div>
-       <div class="col-sm-5">
-         <p>
-           Radhika
-         </p>
-         <p>
-           +91 8149789750
-         </p>
-       </div>
-     </div>
-     <br>
-     <div class="row top-buffer">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-10">
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Abhay
+                 </p>
+                 <p>
+                 +91 8600761832
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Radhika
+                 </p>
+                 <p>
+                 +91 8149789750
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
         <h2 class="heading"> Timing</h2>
         <p>Schedule will be updated soon</p>
-      </div>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
-<div id="big_fight">
- <h1 class="event_name">Big Fight</h1>
- <br>
- <div class="event_content">
-  <div class="row top-buffer">
-    <div class="col-sm-5">
-      <img class="event_image" src="images/swarmanzar.png">
     </div>
-    <div class="col-sm-7">
-     <div id="intro">
-       <p> It is not a fighting pit for bulls, but a battlefield for intellects. To be reckoned you need knowledge as well as wisdom.</p>
-       <p>Keep your hectic studies aside and submerge yourselves in this ocean of ideas. Aarohi brings Junior Debate for school and college students to show their debating prowess. Develop an ingenious persona for sensible discussions and outplay your opponent by your wit.</p>
-       <p> Let the war of words begin!!
-        Get ready to create your realm.</p>
-        <p> Lots of exciting goodies to be won!!!</p>
+    <div id="big_fight">
+         <h1 class="event_name">Big Fight</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/events/big.jpg">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+               <p> It is not a fighting pit for bulls, but a battlefield for intellects. To be reckoned you need knowledge as well as wisdom.</p>
+                <p>Keep your hectic studies aside and submerge yourselves in this ocean of ideas. Aarohi brings Junior Debate for school and college students to show their debating prowess. Develop an ingenious persona for sensible discussions and outplay your opponent by your wit.</p>
+               <p> Let the war of words begin!!
+                Get ready to create your realm.</p>
+               <p> Lots of exciting goodies to be won!!!</p>
 
-      </div>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                   Win lots of goodies!!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+                <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Rohit
+                 </p>
+                 <p>
+                 +91 8551042078
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Chinmay
+                 </p>
+                 <p>
+                 +91 7798576043
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon</p>
+        </div>
+        </div>
     </div>
-  </div>
-  <br>
-  <div class="row top-buffer">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-     <h2 class="heading">Prizes</h2>
-     <p>
-       Win lots of goodies!!
-     </p>
-   </div>
- </div>
- <br>
- <div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="row top-buffer">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-      <h2 class="heading">Contact</h2>
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5">
-     <p>
-       Rohit
-     </p>
-     <p>
-       +91 8551042078
-     </p>
-   </div>
-   <div class="col-sm-5">
-     <p>
-       Chinmay
-     </p>
-     <p>
-       +91 7798576043
-     </p>
-   </div>
- </div>
- <br>
- <div class="row top-buffer">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-10">
-    <h2 class="heading"> Timing</h2>
-    <p> Schedule will be updated soon</p>
-  </div>
-</div>
-</div>
 </div>
 
 

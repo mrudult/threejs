@@ -1,6 +1,0 @@
-{src: 'img/social/abc.txt' ,srct: 'img/social/abc.txt', title: '', ID: 1, albumID:2},
-{src: 'img/social/so1.png' ,srct: 'img/social/so1.png', title: '', ID: 2, albumID:2},
-{src: 'img/social/so2.png' ,srct: 'img/social/so2.png', title: '', ID: 3, albumID:2},
-{src: 'img/social/so3.png' ,srct: 'img/social/so3.png', title: '', ID: 4, albumID:2},
-{src: 'img/social/so4.png' ,srct: 'img/social/so4.png', title: '', ID: 5, albumID:2},
-{src: 'img/social/so5.png' ,srct: 'img/social/so5.png', title: '', ID: 6, albumID:2},

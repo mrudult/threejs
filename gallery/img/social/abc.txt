@@ -1,6 +1,0 @@
-abc.txt
-so1.png
-so2.png
-so3.png
-so4.png
-so5.png
