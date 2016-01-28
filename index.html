@@ -24,6 +24,10 @@
   <!-- pre loader -->
   <script>
 		// Wait for window load
+    if (/Mobi/i.test(navigator.userAgent)) {
+      alert('mobile');
+      window.location.href = 'https://www.quora.com/'
+    };
 		$(window).load(function() {
 			setTimeout(function(){
         $("#loader").delay('1000').fadeOut('slow');
