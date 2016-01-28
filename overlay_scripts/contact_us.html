@@ -1,15 +1,40 @@
-<script type="text/javascript"><link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles/creative.css">
-    <link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="styles/jquery.pagepiling.css">
-    <link rel="stylesheet" type="text/css" href="styles/custom.css">
-    </script>
-<div>
-<table>
-	<tr style="width:100%;">
-		<td style="width:50%;">
-			<h1>Meet our Team</h1>
-			<div class="col-sm-4 col-sm-offset-1 col-md-offset-1 tile">
+<script type="application/javascript">
+    function viewEvent(var1) {
+        document.getElementById('contact_us').style.display = "none";
+
+        $('#contact_usli').removeClass('active');
+        if (var1 == '1') {
+            document.getElementById('contact_us').style.display = "block";
+            $('#contact_usli').addClass('active');
+
+        }
+      }
+</script>
+<div class="container">
+<div class="container-fluid">
+    <nav id="menu">
+        <ul>
+            <li id="contact_usli" class="active"><a onclick="viewEvent('1')">Get in touch!</a></li>
+
+
+        </ul>
+    </nav>
+</div>
+
+<div class="container-fluid top-buffer">
+    <div id="contact_us">
+    <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+              <h2 class="section-heading">Let's Get In Touch!</h2>
+              <hr class="primary">
+              <br>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row padded">
+            <div class="col-sm-4 col-sm-offset-1 col-md-offset-1 tile">
               <h2>
                 President
                 <span class="pull-right">
@@ -23,8 +48,6 @@
                 <br>
               </address>
             </div>
-
-
             <div class="col-sm-4 col-sm-offset-2 col-md-offset-2 tile">
               <h2>
                 Vice President
@@ -40,9 +63,8 @@
                 <br>
               </address>
             </div>
-
-
-
+          </div>
+          <div class="row padded">
             <div class="col-sm-4 col-sm-offset-1 col-md-offset-1 tile">
               <h2>
                 Vice President
@@ -58,7 +80,6 @@
                 <br>
               </address>
             </div>
-
             <div class="col-sm-4 col-sm-offset-2 col-md-offset-2 tile">
               <h2>
                 Treasurer
@@ -74,10 +95,9 @@
                 <br>
               </address>
             </div>
-		</td>
-		<td style="width:50%;">
-			<h1></h1>
-		</td>
-	</tr>
-</table>
+          </div>
+          </div>
+       
+    </div>
+
 </div>

@@ -1,142 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Aarohi 2016 | Central India's Largest Cultural Festival</title>
+<head>
+  <title>Aarohi 2016 | Central India's Largest Cultural Festival</title>
 
-		<!--- custom css-->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-		<link rel="stylesheet" href="css/menu.css"> <!-- Resource style -->
-		<link rel="stylesheet" type="text/css" href="css/fullscreen_overlay.css" >
-		
-		<!-- jquery-->
-	    <script src="js/jquery/jquery-2.1.1.js"></script>
-		<script src="js/menu/modernizr.js"></script>
-		<!-- pre loader -->
-			<script>
-		// Wait for window load
-		 
-		$(window).load(function() {
-			setTimeout(function(){$("#loader").fadeOut('slow');}, 1000);
-			
-		});
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--- custom css-->
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/menu.css"> <!-- Resource style -->
+
+  <link rel="stylesheet" type="text/css" href="css/fullscreen_overlay.css" >
+
+
+  <!-- jquery-->
+  <script src="js/jquery/jquery-2.1.1.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/menu/modernizr.js"></script>
+  <script src="js/pace.min.js"></script>
+  <link rel="stylesheet" href="css/pace.css"> <!-- Resource style -->
+
+  <!-- pre loader -->
+  <script>
+//		// Wait for window load
+//
+//		$(window).load(function() {
+//			setTimeout(function(){$("#loader").fadeOut('slow');}, 1000);
+//		});
 	</script>
-<style>
-#loader{
-	margin-top: 0;
-	position: fixed;
-	width:100%;
-	height:100%;
-	z-index: 9999;
-	background: url(images/Instructions.png) center no-repeat #fff;
-	background-size: cover;
-}
+	<style>
+   a:hover{
+    text-decoration: none;
+
+  }
+  #globe{
+    cursor:pointer;
+  }
 </style>
-	</head>
-	<body id ="main-content">
-	<div id="loader"></div>	
-	
+</head>
+<body id ="main-content">
+	<div id="loader"></div>
 	<!-- menu -->
 	<header>
-	<div class="main_menu">
+   <div class="main_menu">
 
-		<div class="cd-logo">
-		<a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )"><img src="images/name.png" alt="Logo"></a>
-		</div>
+    <div class="cd-logo">
+      <a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )"><img src="images/name.png" alt="Logo"></a>
+    </div>
 
-		<nav class="cd-main-nav-wrapper">
-			<ul class="cd-main-nav">
+    <nav class="cd-main-nav-wrapper">
+     <ul class="cd-main-nav">
 
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )"> About us</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('proshow').x , globe_menu.get('proshow').z )">Proshow</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
-				</li>
-				<li>
-				<a target="_blank" href="gallery/gallery.html">Social Initiatives</a>
-				</li>
-				<li>
-				<a>Workshops</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )">Contact Us</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('sponsors').x , globe_menu.get('sponsors').z )">Sponsors</a>
-				</li>
-				<li>
-					<a  class="cd-subnav-trigger"><span>Events</span></a>
-					<ul>
-						<li class="go-back">
-						<a href="#0">Menu</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('dance').x , globe_menu.get('dance').z )">Dance</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('musical').x , globe_menu.get('musical').z )">Musicals</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('personality').x , globe_menu.get('personality').z )">Personality</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('drama').x , globe_menu.get('drama').z )">Dramatics</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('filmography').x , globe_menu.get('filmography').z )">Filmography</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('art_and_literary').x , globe_menu.get('art_and_literary').z )">Art And Literary</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('quiz').x , globe_menu.get('quiz').z )">Quiz</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('informals').x , globe_menu.get('informals').z )">Informals</a>
-						</li>
-						<li>
-						<a href="#0" class="placeholder">Placeholder</a>
-						</li>
-					</ul>
-				</li>
-			</ul> <!-- .cd-main-nav -->
-		</nav> <!-- .cd-main-nav-wrapper -->
-		
-		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-	</header>
+      <li>
+        <a onclick="gotoGlobeMenu(globe_menu.get('about_us').x , globe_menu.get('about_us').z )"> About us</a>
+      </li>
+      <li>
+        <a onclick="gotoGlobeMenu(globe_menu.get('proshow').x , globe_menu.get('proshow').z )">Proshow</a>
+      </li>
+      <li>
+        <a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
+      </li>
+      <li>
+        <a target="_blank" href="gallery/gallery.html">Social Initiatives</a>
+      </li>
+      <li>
+        <a>Workshops</a>
+      </li>
+      <li>
+        <a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )">Contact Us</a>
+      </li>
+      <li>
+        <a onclick="gotoGlobeMenu(globe_menu.get('sponsors').x , globe_menu.get('sponsors').z )">Sponsors</a>
+      </li>
+      <li>
+       <a  class="cd-subnav-trigger"><span>Events</span></a>
+       <ul>
+        <li class="go-back">
+          <a href="#0">Menu</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('dance').x , globe_menu.get('dance').z )">Dance</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('musical').x , globe_menu.get('musical').z )">Musicals</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('personality').x , globe_menu.get('personality').z )">Personality</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('drama').x , globe_menu.get('drama').z )">Dramatics</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('filmography').x , globe_menu.get('filmography').z )">Filmography</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('art_and_literary').x , globe_menu.get('art_and_literary').z )">Art And Literary</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('quiz').x , globe_menu.get('quiz').z )">Quiz</a>
+        </li>
+        <li>
+          <a onclick="gotoGlobeMenu(globe_menu.get('informals').x , globe_menu.get('informals').z )">Informals</a>
+        </li>
+        <li>
+          <a href="#0" class="placeholder">Placeholder</a>
+        </li>
+      </ul>
+    </li>
+  </ul> <!-- .cd-main-nav -->
+</nav> <!-- .cd-main-nav-wrapper -->
+
+<a href="#0" class="cd-nav-trigger"><span></span></a>
 </div>
+</header>
+
 <div id="social_media">
 	<a target="_blank" href="http://www.facebook.com/aarohiworld"><img src="images/social_media/facebook.png"></a><br>
 	<a target="_blank" href="http://www.twitter.com/aarohi_vnit"><img src="images/social_media/twitter.png"></a><br>
 	<a target="_blank" href="http://www.instagram.com/aarohi_vnitnagpur"><img src="images/social_media/instagram.png"></a><br>
 	<a target="_blank" href="http://www.youtube.com/VNITAarohi"><img src="images/social_media/youtube.png"></a>
 </div>
-	<main class="cd-main-content">
-		<!-- main content here -->
-	</main>
-		<div class="overlay overlay-corner">
-			<button type="button" class="overlay-close">Close</button>
-			<div id="popup_content"> </div>
-		</div>
-		
-		<script src="js/menu/main.js"></script> 
-		<script src="js/menu/classie.js"></script>
-		
-		
-				 <!-- js file for popup -->
-		 <script src="js/popup/overlay.js"></script>
-		<div id="globe"></div> 
-		<script src="js/build/three.min.js"></script>
-		<script src="js/libs/tween.min.js"></script>
-		<script src="js/THREEx.KeyboardState.js"></script>
-		<script src="js/renderers/Projector.js"></script>
-		<script src="js/controls/OrbitControls.js"></script>
-		<script src="js/Detector.js"></script>
-		<script>
+<div id="dates">
+  <p>26<sup>th</sup> - 28<sup>th</sup><span id="month"> February</span></p>
+</div>
+<main class="cd-main-content">
+  <!-- main content here -->
+</main>
+<div class="overlay overlay-corner">
+  <script>
+    document.addEventListener('keyup', function(e){if(e.keyCode == 27){toggleOverlay();}});
+  </script>
+  <button type="button" class="overlay-close">Close</button>
+  <div id="popup_content"></div>
+</div>
+
+<script src="js/menu/main.js"></script>
+<script src="js/menu/classie.js"></script>
+
+
+<!-- js file for popup -->
+<script src="js/popup/overlay.js"></script>
+<div id="globe"></div>
+<script src="js/build/three.min.js"></script>
+<script src="js/libs/tween.min.js"></script>
+<script src="js/THREEx.KeyboardState.js"></script>
+<script src="js/renderers/Projector.js"></script>
+<script src="js/controls/OrbitControls.js"></script>
+<script src="js/Detector.js"></script>
+<script>
 	if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 	var container,controls;
 
@@ -146,13 +159,13 @@
 
 	var windowHalfX = window.innerWidth / 2;
 	var windowHalfY = window.innerHeight / 2;
-	
+
 	// global var used for rotation method
 	var rotWorldMatrix,rotObjectMatrix, rotWorldMatrix, rotation_matrix, camera, scene, renderer, objects, skyBox, globe, parent;
-	
+
 	// menu item variables
 	var contact_us, sponsors, film, guitar, informals, proshow, art, cn, quiz, drama, sun_element, trees, about_us, personality, dance;
-	
+
 	// for mouse hover
 	var canvas1, context1,sprite1,texture1,mouse=new THREE.Vector3();
 
@@ -160,7 +173,8 @@
 	var x_axis = new THREE.Vector3(1,0,0);
 	var z_axis = new THREE.Vector3(0,0,1);
 	var xrot=0,zrot=0;
-	
+	var max_rot= 2*Math.PI;
+
 	// var for getting keyboard event
 	var keyboard = new THREEx.KeyboardState();
 
@@ -183,7 +197,7 @@
 
 
 	init();
-	function init() 
+	function init()
 	{
 		container = document.getElementById('globe');
 		document.body.appendChild( container );
@@ -196,10 +210,9 @@
 		camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
 		scene.add(camera);
 		camera.position.set(0,0,50);
-		//camera.lookAt(scene.position);
 
 		// renderer
-		renderer = new THREE.WebGLRenderer();
+		renderer = new THREE.WebGLRenderer({ antialias: true });
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		container.appendChild( renderer.domElement );
@@ -218,7 +231,7 @@
 		parent.position.x=50;
 		parent.position.z=-90;
 		scene.add(parent);
-	
+
 		//skybox
 		var imagePrefix = "images/sky1/skybox_";
 		var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
@@ -226,18 +239,18 @@
 		var imageURLs = [];
 		for (var i = 0; i < 6; i++)
 		{
-			 imageURLs.push( imagePrefix + directions[i] + imageSuffix );
-		}
-		 var materialArray = [];
-		 for (var i = 0; i < 6; i++)
-		  materialArray.push( new THREE.MeshBasicMaterial({
-		   map: THREE.ImageUtils.loadTexture( imageURLs[i] ),
-		   side: THREE.BackSide
-		  }));
-		 var skyGeometry = new THREE.CubeGeometry( 500000, 500000, 500000 );
-		 var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
-		  skyBox = new THREE.Mesh( skyGeometry, skyMaterial );	
-		  scene.add(skyBox);
+      imageURLs.push( imagePrefix + directions[i] + imageSuffix );
+    }
+    var materialArray = [];
+    for (var i = 0; i < 6; i++)
+      materialArray.push( new THREE.MeshBasicMaterial({
+       map: THREE.ImageUtils.loadTexture( imageURLs[i] ),
+       side: THREE.BackSide
+     }));
+    var skyGeometry = new THREE.CubeGeometry( 500000, 500000, 500000 );
+    var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
+    skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
+    scene.add(skyBox);
 
 		//globe -------------------------------------------------------------------------------
 		var jsonLoader = new THREE.JSONLoader();
@@ -251,26 +264,16 @@
 			globe.scale.set(0.020,0.020,0.020);
 			scene.add( globe );
 		} );
-		// Sun   -----------------------------------------------------------------------------
-		//  jsonLoader = new THREE.JSONLoader();
-		// jsonLoader.load( "models/sun/Sun.js", function (geometry,materials)
-		// {
-		// 	var material = new THREE.MeshFaceMaterial( materials );
-		// 	sun_element = new THREE.Mesh( geometry, material );
-		// 	sun_element.scale.set(0.020,0.020,0.020);
-		// 	sun_element.name="sun";
-		// 	parent.add( sun_element );
-		// } );
 		// Trees   -----------------------------------------------------------------------------
-		 jsonLoader = new THREE.JSONLoader();
-		jsonLoader.load( "models/sun/Trees.js", function (geometry,materials)
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			trees = new THREE.Mesh( geometry, material );
-			trees.scale.set(0.020,0.020,0.020);
-			trees.name="trees";
-			parent.add( trees );
-		} );
+   jsonLoader = new THREE.JSONLoader();
+   jsonLoader.load( "models/sun/Trees.js", function (geometry,materials)
+   {
+     var material = new THREE.MeshFaceMaterial( materials );
+     trees = new THREE.Mesh( geometry, material );
+     trees.scale.set(0.020,0.020,0.020);
+     trees.name="trees";
+     parent.add( trees );
+   } );
 
 		// menu items for globe ---------------------------------------------------------------------------
 		jsonLoader.load( "models/menu_items/Filmography.js", function (geometry,materials)
@@ -297,107 +300,107 @@
 			personality.scale.set(0.020,0.020,0.020);
 			parent.add(personality);
 		} );
-		jsonLoader.load( "models/menu_items/Post.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			contact_us = new THREE.Mesh( geometry, material );
-			contact_us.scale.set(0.020,0.020,0.020);
-			contact_us.name = "contact_us";
-			parent.add(contact_us);
-		}
-		);
-		jsonLoader.load( "models/menu_items/Contact.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			about_us = new THREE.Mesh( geometry, material );
-			about_us.scale.set(0.020,0.020,0.020);
-			about_us.name = "about_us";
-			parent.add(about_us);
-		}
-		);
+		jsonLoader.load( "models/menu_items/Post.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     contact_us = new THREE.Mesh( geometry, material );
+                     contact_us.scale.set(0.020,0.020,0.020);
+                     contact_us.name = "contact_us";
+                     parent.add(contact_us);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/Contact.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     about_us = new THREE.Mesh( geometry, material );
+                     about_us.scale.set(0.020,0.020,0.020);
+                     about_us.name = "about_us";
+                     parent.add(about_us);
+                   }
+                   );
 
-		jsonLoader.load( "models/menu_items/Spons.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			sponsors = new THREE.Mesh( geometry, material );
-			sponsors.scale.set(0.020,0.020,0.020);
-			sponsors.name = "sponsors";
-			parent.add(sponsors);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/informals.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			informals = new THREE.Mesh( geometry, material );
-			informals.scale.set(0.020,0.020,0.020);
-			informals.name = "informals";
-			parent.add(informals);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/proshow.js", 
-		function ( geometry, materials ) 
-		{	var material = new THREE.MeshFaceMaterial( materials );
-			proshow = new THREE.Mesh( geometry, material );
-			proshow.scale.set(0.020,0.020,0.020);
-			proshow.name = "proshow";
-			parent.add(proshow);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/art.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			art = new THREE.Mesh( geometry, material );
-			art.scale.set(0.020,0.020,0.020);
-			art.name = "art_and_literary";
-			parent.add(art);
-		}
-		 );
+		jsonLoader.load( "models/menu_items/Spons.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     sponsors = new THREE.Mesh( geometry, material );
+                     sponsors.scale.set(0.020,0.020,0.020);
+                     sponsors.name = "sponsors";
+                     parent.add(sponsors);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/informals.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     informals = new THREE.Mesh( geometry, material );
+                     informals.scale.set(0.020,0.020,0.020);
+                     informals.name = "informals";
+                     parent.add(informals);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/proshow.js",
+                    function ( geometry, materials )
+                    {	var material = new THREE.MeshFaceMaterial( materials );
+                     proshow = new THREE.Mesh( geometry, material );
+                     proshow.scale.set(0.020,0.020,0.020);
+                     proshow.name = "proshow";
+                     parent.add(proshow);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/art.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     art = new THREE.Mesh( geometry, material );
+                     art.scale.set(0.020,0.020,0.020);
+                     art.name = "art_and_literary";
+                     parent.add(art);
+                   }
+                   );
 
-		jsonLoader.load( "models/menu_items/CN.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			cn = new THREE.Mesh( geometry, material );
-			cn.scale.set(0.020,0.020,0.020);
-			cn.name = "cultural_nite";
-			parent.add(cn);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/guitar.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			guitar = new THREE.Mesh( geometry, material );
-			guitar.scale.set(0.020,0.020,0.020);
-			guitar.name = "musical";
-			parent.add(guitar);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/quiz.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			quiz = new THREE.Mesh( geometry, material );
-			quiz.scale.set(0.020,0.020,0.020);
-			quiz.name = "quiz";
-			parent.add(quiz);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/Drama.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			drama = new THREE.Mesh( geometry, material );
-			drama.scale.set(0.020,0.020,0.020);
-			drama.name = "drama";
-			parent.add(drama);
-		}
-		 );
+		jsonLoader.load( "models/menu_items/CN.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     cn = new THREE.Mesh( geometry, material );
+                     cn.scale.set(0.020,0.020,0.020);
+                     cn.name = "cultural_nite";
+                     parent.add(cn);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/guitar.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     guitar = new THREE.Mesh( geometry, material );
+                     guitar.scale.set(0.020,0.020,0.020);
+                     guitar.name = "musical";
+                     parent.add(guitar);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/quiz.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     quiz = new THREE.Mesh( geometry, material );
+                     quiz.scale.set(0.020,0.020,0.020);
+                     quiz.name = "quiz";
+                     parent.add(quiz);
+                   }
+                   );
+		jsonLoader.load( "models/menu_items/Drama.js",
+                    function ( geometry, materials )
+                    {
+                     var material = new THREE.MeshFaceMaterial( materials );
+                     drama = new THREE.Mesh( geometry, material );
+                     drama.scale.set(0.020,0.020,0.020);
+                     drama.name = "drama";
+                     parent.add(drama);
+                   }
+                   );
 		// ------------------------------------------------------------------------------------
 		// lights
 		var ambientLight = new THREE.AmbientLight(0xcccccc);
@@ -410,7 +413,7 @@
 		var light2 = new THREE.DirectionalLight( 0xffffff, .60 );
 		light2.position.set(-1,1,0);
 		scene.add( light2 );
-	
+
 		// User interaction
 		document.getElementById('globe').addEventListener( 'mousedown', onMouseDown, false );
 		window.addEventListener( 'resize', onWindowResize, false );
@@ -419,7 +422,7 @@
 	}
 
 	// object picker function
-	function onMouseDown( event ) 
+	function onMouseDown( event )
 	{
 		event.preventDefault();
 		console.log("Click!");
@@ -435,46 +438,46 @@
 		// now cast a ray in  thee direction of the camera and see the objects it passes through
 		var ray =  new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
 		var intersects = ray.intersectObjects( parent.children );
-	  	if(intersects.length > 0 && (mouseVector.y < 0.77367))
-			{
+    if(intersects.length > 0 && (mouseVector.y < 0.77367))
+    {
 
-				var url = "overlay_scripts/"+ intersects[0].object.name+".html";
-				toggleOverlay();
-				loadHTML(url);
-			}
-		}
-		function loadHTML( url)
-		{
-			$( "#popup_content" ).load( url );
-		}
+      var url = "overlay_scripts/"+ intersects[0].object.name+".html";
+      toggleOverlay();
+      loadHTML(url);
+    }
+  }
+  function loadHTML( url)
+  {
+   $( "#popup_content" ).load( url );
+ }
 
-	function gotoGlobeMenu(x_desired,z_desired)
-	{
-		new TWEEN.Tween(globe.rotation).to( {x: x_desired , z : z_desired},1200 ).easing(TWEEN.Easing.Elastic.Out).start();
-		new TWEEN.Tween(parent.rotation).to( {x: x_desired , z : z_desired},1200).easing(TWEEN.Easing.Elastic.Out).start();
-			// 
+ function gotoGlobeMenu(x_desired,z_desired)
+ {
+  new TWEEN.Tween(globe.rotation).to( {x: x_desired , z : z_desired},1200 ).easing(TWEEN.Easing.Elastic.Out).start();
+  new TWEEN.Tween(parent.rotation).to( {x: x_desired , z : z_desired},1200).easing(TWEEN.Easing.Elastic.Out).start();
+			//
 			xrot=x_desired;
 			zrot=z_desired;
-	}
+   }
 
-	function onWindowResize() {
+   function onWindowResize() {
 
-		windowHalfX = window.innerWidth / 2;
-		windowHalfY = window.innerHeight / 2;
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
 
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-		renderer.setSize( window.innerWidth, window.innerHeight );
-	}
-	
+    renderer.setSize( window.innerWidth, window.innerHeight );
+  }
 
-	function animate() 
-	{
-		requestAnimationFrame( animate );
-		render();
-		update();
-	}
+
+  function animate()
+  {
+    requestAnimationFrame( animate );
+    render();
+    update();
+  }
 
 	// used for debugging
 	function netRotate()
@@ -488,8 +491,11 @@
 		if ( keyboard.pressed("s") || keyboard.pressed("down") )
 		{
 			xrot+=0.04;
+			if(xrot >= max_rot)
+			{
+				xrot-= max_rot;
+			}
 			skyBox.rotation.x+=0.01;
-		//	sun_element.rotation.x=xrot;
 			parent.rotation.x=xrot;
 			globe.rotation.x=xrot;
 
@@ -497,51 +503,44 @@
 		else if ( keyboard.pressed("w") || keyboard.pressed("up"))
 		{
 			xrot-=0.04;
+			if(xrot <= 0)
+			{
+				xrot+= max_rot;
+			}
 			skyBox.rotation.x-=0.01;
-			//sun_element.rotation.x=xrot;
 			parent.rotation.x=xrot;
 			globe.rotation.x=xrot;
 		}
-		if ( keyboard.pressed("a") || keyboard.pressed("left"))
+		else if ( keyboard.pressed("a") || keyboard.pressed("left"))
 		{
 			zrot+=0.04;
+			if(zrot >= max_rot)
+			{
+				zrot-= max_rot;
+			}
+
 			skyBox.rotation.z+=0.01;
-			//sun_element.rotation.z=zrot;
 			parent.rotation.z=zrot;
 			globe.rotation.z=zrot;
 		}
 		else if ( keyboard.pressed("d") || keyboard.pressed("right") )
 		{
 			zrot-=0.04;
+			if(zrot <= 0)
+			{
+				zrot+= max_rot;
+			}
 			skyBox.rotation.z-=0.01;
-			//sun_element.rotation.z=zrot;
 			parent.rotation.z=zrot;
 			globe.rotation.z=zrot;
 		}
-		if(zrot >= 2*Math.PI)
-		{ 
-			zrot-= 2*Math.PI;
-		}
-		else if(zrot <= -2*Math.PI)
-		{ 
-			zrot+= 2*Math.PI;
-		}
-		if(xrot <= -2*Math.PI)
-		{
-			xrot+= 2*Math.PI;
-		}
-		else if(xrot >= 2*Math.PI)
-		{
-			xrot-= 2*Math.PI;
-		}
-		
-       
+
 	}
 	function render()
 	{
 		renderer.render( scene, camera );
 	}
 
-	</script>
-    </body>
+</script>
+</body>
 </html>

@@ -1,164 +1,173 @@
-<style>
-    p {
-        font-weight: lighter;
-        font-size: 0.5em;
-        letter-spacing: 0.1em;
-        font-family: 'helvetica';
-    }
-    /*musical*/
-    
-    #purple {
-        display: block;
-    }
-    
-    #madhur {
-        display: none;
-    }
-    
-    #rhythmDivine {
-        display: none;
-    }
-    
-    #swarmanzar {
-        display: none;
-    }
-    
-    #eventImg {
-        width: 350px;
-        height: 400px;
-        margin-left: 20px;
-    }
-    
-    #eventContent {}
-    
-    .content {
-        display: inline-flex;
-    }
-    
-    #menu ul {
-        font-family: "FishFingers";
-    }
-    
-    .active {
-        text-decoration: underline;
-        background-color: #4CAF50;
-    }
-    
-    #menu {
-        margin: 0px auto;
-    }
-    
-    #menu ul {
-        text-align: center;
-    }
-    
-    #menu li {
-        display: inline-block;
-    }
-    
-    #menu li a,
-    #menu li span {
-        display: inline-block;
-        margin-left: 0.50em;
-        margin: 2em 1.5em 1em 1.5em;
-        letter-spacing: 0.20em;
-        text-decoration: none;
-        font-size: 0.90em;
-        font-weight: 600;
-        text-transform: uppercase;
-        outline: 0;
-        color: #FFF;
-    }
-</style>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="application/javascript">
-    $(document).ready(function() {
-
-        $(window).scroll(function() {
-
-            console.log($(window).scrollTop())
-            if ($(window).scrollTop() > 230) {
-                $('#menu-wrapper').addClass('navbar-fixed');
-            }
-            if ($(window).scrollTop() < 230) {
-                $('#menu-wrapper').removeClass('navbar-fixed');
-            }
-        });
-    });
-</script>
 
 <script type="application/javascript">
     function viewEvent(var1) {
-        document.getElementById('cyno').style.display = "none";
-        document.getElementById('bigfight').style.display = "none";
+        document.getElementById('cynosure').style.display = "none";
+        document.getElementById('big_fight').style.display = "none";
         $('#cynoli').removeClass('active');
-        $('#bigfightli').removeClass('active');
-        $('#menu-wrapper').addClass('navbar-fixed');
+        $('#big_fightli').removeClass('active');
         if (var1 == '1') {
-            document.getElementById('cyno').style.display = "block";
-            document.title = "Cynosure";
+            document.getElementById('cynosure').style.display = "block";
             $('#cynoli').addClass('active');
-            document.getElementById("cyno").scrollIntoView();
+
         }
-        if (var1 == '2') {
-            document.getElementById('bigfight').style.display = "block";
-            document.title = "Big Fight Debate";
-            $('#bigfightli').addClass('active');
-            document.getElementById("bigfight").scrollIntoView()
+        else if (var1 == '2') {
+            document.getElementById('big_fight').style.display = "block";
+            $('#big_fightli').addClass('active');
+           
         }
+
     }
 </script>
-<div id="menu-wrapper">
+<div class="container">
+<div class="container-fluid">
     <nav id="menu">
         <ul>
-            <li id="cynoli" class="active"><a href="javascript:viewEvent('1')">Cynosure</a></li>
-            <li id="bigfightli"><a href="javascript:viewEvent('2')">Big Fight</a>
-                <li>
+            <li id="cynoli" class="active"><a onclick="viewEvent('1')">Personality Contest</a></li>
+            <li id="big_fightli"><a onclick="viewEvent('2')">Debate</a></li>
+
+
         </ul>
     </nav>
 </div>
-<div id="wrapper">
-    <div id="cyno">
-        <div class="extra2 container">
-            <div class="ebox1">
-                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
-                <div class="title">
-                    <h1 style="text-align:center; padding-top:70px">Cynosure</h1>
-                    <p class="byline" style="text-align:center; padding-top:20px">‘Consolidate The Fervor, Ye Who Enter Here!</p>
-                    <p style="text-align:center;"><strong>Gates are open wide,<br>
-                            The Bravest Shall Pass!!
-                            <br>
-                            A Quest To Discover, the Indomitable Spirit Within You’</strong></p>
-                    <p style="text-align:center;"><strong><bold>‘CYNOSURE’</bold> is a platform to realize your inner strength, where your valour would be tested against the ferocious crowd of VNIT!</strong></p>
-                    <p style="text-align:center;"><strong>Summon all your courage,
-                            <br>
-                            Take a step inside,
-                            <br>
-                            Impress the populace by your persona!</strong></p>
-                    <p style="text-align:center;"><strong>Only one mantra:
-                            <br>
-                            ‘Only brave and witty one rules!!’</strong></p>
-                    <p class="byline" style="text-align:center;">Come to Cynosure 2016!!!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="bigfight">
 
-        <div class="extra2 container">
-            <div class="ebox1">
-                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
-                <div class="title">
-                    <h1 style="text-align:center;">Big Fight - Junior</h1><div class="content">
-                        <div><img src=" " id="eventImg" /> </div>
-                        <div id="eventContent">
-                    <p class="byline" style="text-align:center; padding-top:20px">It is not a fighting pit for bulls, but a battlefield for intellects. To be reckoned you need knowledge as well as wisdom.</p>
-                    <p style="text-align:center;"><strong>Keep your hectic studies aside and submerge yourselves in this ocean of ideas.  Aarohi brings Junior Debate for school and college students to show their debating prowess. Develop an ingenious persona for sensible discussions and outplay your opponent by your wit. </strong></p>
-                    <p style="text-align:center;"><strong>Let the war of words begin!!</strong></p>
-                    <p style="text-align:center;"><strong>Get ready to create your realm.</strong></p>
-                    <p class="byline" style="text-align:center;">Lots of exciting goodies to be won!!!</p>
+<div class="containe-fluid top-buffer">
+    <div id="cynosure">
+        <h1 class="event_name">Cynosure</h1>
+        <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro"><p>
+                            ‘Consolidate The Fervor, Ye Who Enter Here!</p>
+                            <p>Gates are open wide, The Bravest Shall Pass!!
+                            A Quest To Discover, the Indomitable Spirit Within You’</p>
+                            <br>
+                            <p>‘CYNOSURE’ is a platform to realize your inner strength, where your valour would be tested against the ferocious crowd of VNIT!</p>
+                            <p>
+                            Summon all your courage,
+                            Take a step inside,
+                            Impress the populace by your persona!
+
+                            Only one mantra:
+                            ‘Only brave and witty one rules!!’
+                            </p><p>
+                            Come to Cynosure 2016!!!</p>
+                     </div>
                 </div>
-                    </div></div></div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Win lots of goodies!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Abhay
+                 </p>
+                 <p>
+                 +91 8600761832
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Radhika
+                 </p>
+                 <p>
+                 +91 8149789750
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p>Schedule will be updated soon</p>
+        </div>
         </div>
     </div>
+    </div>
+    <div id="big_fight">
+         <h1 class="event_name">Big Fight</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+               <p> It is not a fighting pit for bulls, but a battlefield for intellects. To be reckoned you need knowledge as well as wisdom.</p>
+                <p>Keep your hectic studies aside and submerge yourselves in this ocean of ideas. Aarohi brings Junior Debate for school and college students to show their debating prowess. Develop an ingenious persona for sensible discussions and outplay your opponent by your wit.</p>
+               <p> Let the war of words begin!!
+                Get ready to create your realm.</p>
+               <p> Lots of exciting goodies to be won!!!</p>
+
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                   Win lots of goodies!!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+                <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Rohit
+                 </p>
+                 <p>
+                 +91 8551042078
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Chinmay
+                 </p>
+                 <p>
+                 +91 7798576043
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
 </div>

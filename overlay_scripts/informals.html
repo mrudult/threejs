@@ -1,81 +1,6 @@
-<style>
-    p {
-        font-weight: lighter;
-        font-size: 0.5em;
-        letter-spacing: 0.1em;
-        font-family: 'helvetica';
-    }
-    /*musical*/
-    
-    #purple {
-        display: block;
-    }
-    
-    #madhur {
-        display: none;
-    }
-    
-    #rhythmDivine {
-        display: none;
-    }
-    
-    #swarmanzar {
-        display: none;
-    }
-    
-    #eventImg {
-        width: 350px;
-        height: 400px;
-        margin-left: 20px;
-    }
-    
-    #eventContent {}
-    
-    .content {
-        display: inline-flex;
-    }
-    
-    #menu ul {
-        font-family: "FishFingers";
-    }
-    
-    .active {
-        text-decoration: underline;
-        background-color: #4CAF50;
-    }
-    
-    #menu {
-        margin: 0px auto;
-    }
-    
-    #menu ul {
-        text-align: center;
-    }
-    
-    #menu li {
-        display: inline-block;
-    }
-    
-    #menu li a,
-    #menu li span {
-        display: inline-block;
-        margin-left: 0.50em;
-        margin: 2em 1.5em 1em 1.5em;
-        letter-spacing: 0.20em;
-        text-decoration: none;
-        font-size: 0.90em;
-        font-weight: 600;
-        text-transform: uppercase;
-        outline: 0;
-        color: #FFF;
-    }
-</style>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="application/javascript">
     $(document).ready(function() {
-
         $(window).scroll(function() {
-
             console.log($(window).scrollTop())
             if ($(window).scrollTop() > 230) {
                 $('#menu-wrapper').addClass('navbar-fixed');
@@ -88,74 +13,160 @@
 </script>
 <script type="application/javascript">
     function viewEvent(var1) {
-        document.getElementById('informal').style.display = "none";
-        document.getElementById('penta').style.display = "none";
-        $('#informalli').removeClass('active');
+        document.getElementById('informals').style.display = "none";
+        document.getElementById('pentathlon').style.display = "none";
+        $('#informalsli').removeClass('active');
         $('#pentali').removeClass('active');
         $('#menu-wrapper').addClass('navbar-fixed');
-        if (var1 == '3') {
-            document.getElementById('informal').style.display = "block";
-            document.title = "informal Making";
-            $('#informalli').addClass('active');
-            document.getElementById("informal").scrollIntoView();
+        if (var1 == '1') {
+            document.getElementById('informals').style.display = "block";
+            $('#informalsli').addClass('active');
+
         }
-        if (var1 == '4') {
-            document.getElementById('penta').style.display = "block";
-            document.title = "penta Making";
+        else if (var1 == '2') {
+            document.getElementById('pentathlon').style.display = "block";
             $('#pentali').addClass('active');
-            document.getElementById("penta").scrollIntoView()
+           
         }
 
     }
 </script>
-<div id="menu-wrapper">
+<div class="container">
+<div class="container-fluid">
     <nav id="menu">
         <ul>
-            <li id="informalli" class="active"><a href="javascript:viewEvent('3')">Informals</a></li>
-            <li id="pentali"><a href="javascript:viewEvent('4')">Pentathlon</a></li>
+            <li id="informalsli" class="active"><a onclick="viewEvent('1')">Informals</a></li>
+            <li id="pentali"><a onclick="viewEvent('2')">Pentathlon</a></li>
+
+
         </ul>
     </nav>
 </div>
-<div id="wrapper">
-    <div id="informal">
-        <div class="extra2 container">
-            <div class="ebox1">
-                <div class="hexagon"><span class="icon icon-lightbulb"></span></div>
-                <div class="title">
-                    <h2>Fusce ultrices fringilla</h2>
-                    <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
-                </div>
-                <p>This is <strong>Plushiness</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The pentas in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
-                <a href="#" class="button">Etiam posuere</a>
-            </div>
 
-            <div class="ebox2">
-                <div class="hexagon"><span class="icon icon-bullhorn"></span></div>
-                <div class="title">
-                    <h2>Donec dictum metus</h2>
-                    <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
-                </div>
-                <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet.</p>
-                <a href="#" class="button">Etiam posuere</a>
+<div class="containe-fluid top-buffer">
+    <div id="informals">
+        <h1 class="event_name">Informals</h1>
+        <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
             </div>
-
+                <div class="col-sm-7">
+                     <div id="intro">
+                     <p>
+Content not found</p>
+                     </div>
+                </div>
         </div>
-
-    </div>
-    <div id="penta">
-
-        <div class="extra2 container">
-            <div class="ebox1">
-                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
-                <div class="title">
-                    <h1 style="text-align:center; padding-top:20px">Pentathlon</h1>
-                    <p class="byline" style="text-align:center; padding-top:20px">'Each friend represents a world in us, a world possibly not born until they arrive and it is only by this meeting that a new world is born.'</p>
-                    <p style="text-align:center;"><strong>Doff your worries and now it is the  time to enjoy with your beloved friends. We welcome all the enthusiast groups for the rendezvous 'Pentathlon'. Get enthralled by the joyous activities.</strong></p>
-                    <p class="byline" style="text-align:center;">Come and be victorious in the challenges and win exciting prizes.</p>
-                </div>
-            </div>
-
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Win lots of goodies!
+                 </p>
         </div>
-
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Atharva
+                 </p>
+                 <p>
+                 +91 9881367320
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Megha
+                 </p>
+                 <p>
+                 +91 9730459546
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p>During the fest at informals section</p>
+        </div>
+        </div>
     </div>
+    </div>
+    <div id="pentathlon">
+         <h1 class="event_name">Pentathlon</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
+            </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                     <p>
+                        'Each friend represents a world in us, a world possibly not born until they arrive and it is only by this meeting that a new world is born.'</p>
+                        <p>
+                        Doff your worries and now it is the time to enjoy with your beloved friends. We welcome all the enthusiast groups for the rendezvous 'Pentathlon'. Get enthralled by the joyous activities.
+                        </p>
+                        <p>Come and be victorious in the challenges and win exciting prizes.</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                   Win lots of goodies!!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Atharva
+                 </p>
+                 <p>
+                 +91 9881367320
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Megha
+                 </p>
+                 <p>
+                 +91 9730459546
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> During the fest</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
 </div>

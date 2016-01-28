@@ -1,19 +1,20 @@
 /* Overlay style */
 .overlay {
+	overflow-y:scroll; 
 	z-index:15;
 	position: fixed;
 	width: 100%;
-	height: 100%;
-	top: 7.65%;
+	height: 92.5%;
+	top: 7.50%;
 	left: 0%;
-	background: rgba(51,65,71,0.95);
+	background: rgba(51,65,71,0.90);
 }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
+	width: 50px;
+	height: 50px;
+	position: fixed;
 	right: 20px;
 	top: 20px;
 	overflow: hidden;
@@ -25,47 +26,6 @@
 	z-index: 100;
 }
 
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
-}
-
-.overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.overlay ul li a {
-	font-size: 54px;
-	font-weight: 300;
-	display: block;
-	color: #fff;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-	color: #f0f0f0;
-}
 
 /* Effects */
 .overlay-corner {
@@ -73,8 +33,8 @@
 	visibility: hidden;
 	-webkit-transform: translateY(-50px) translateX(-50px);
 	transform: translateY(-50px) translateX(-50px);
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s, visibility 0s 0.5s;
-	transition: opacity 0.5s, transform 0.5s, visibility 0s 0.5s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s, visibility 0s 0.3s;
+	transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
 }
 
 .overlay-corner.open {
@@ -82,8 +42,8 @@
 	visibility: visible;
 	-webkit-transform: translateY(0%);
 	transform: translateY(0%);
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-	transition: opacity 0.5s, transform 0.5s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
 }
 
 @media screen and (max-height: 30.5em) {
@@ -92,6 +52,118 @@
 		font-size: 34px;
 	}
 	.overlay ul li {
-		min-height: 34px;
+		min-height: 50px;
 	}
+}
+
+.heading{
+	margin-bottom: 1px;
+font-family: 'Helsinki', 'Open Sans';
+}
+p{
+	text-align: left;
+    font-weight: lighter;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-family: 'Signika', 'Open Sans';
+}
+#purple_haze {
+    display: block;
+}
+
+#madhur_antakshari {
+    display: none;
+}
+
+#rhythm_divine {
+    display: none;
+}
+
+#swarmanzar {
+    display: none;
+}
+#informals{
+	display: block;
+}
+#pentathlon{
+	display: none;
+}
+#film{
+	display: block;
+}
+#photo{
+	display: none;
+}
+#quiz{
+	display: block;
+}
+#cynosure{
+	display: block;
+}
+#big_fight{
+	display: none;
+}
+#literary{
+	display: none;
+}
+#art_conoscenza{
+	display: block;
+}
+#halla_bol{
+	display: block;
+}
+#abhi{
+	display: none;
+}
+.event_image {
+    width: 400px;
+    height: 300px;
+}
+
+.event_name{
+	padding-top: 10px;
+    font-family: 'Helsinki';
+    text-align: center;
+}
+/*menu*/
+#menu ul {
+    font-family: "FishFingers";
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+#menu {
+	 margin: 0px 0px auto;
+}
+
+#menu ul {
+    text-align: center;
+}
+
+#menu li {
+	min-height: 25px;
+	max-height: 40px;
+    display: inline-block;
+}
+
+#menu li a,
+#menu li span {
+    display: inline-block;
+    margin-left: 0.50em;
+    margin: 0.1em 1.5em 1em 1.5em;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    font-size: 0.90em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:#FFF;
+}
+.event_content{
+	margin-bottom: 25px;
+	margin-left: 25px;
+}
+.top-buffer{
+	margin-top:10px;
 }

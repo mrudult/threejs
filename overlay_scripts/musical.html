@@ -1,228 +1,298 @@
-<style>
-    p {
-        font-weight: lighter;
-        font-size: 0.5em;
-        letter-spacing: 0.1em;
-        font-family: 'helvetica';
-    }
-    /*musical*/
-    
-    #purple {
-        display: block;
-    }
-    
-    #madhur {
-        display: none;
-    }
-    
-    #rhythmDivine {
-        display: none;
-    }
-    
-    #swarmanzar {
-        display: none;
-    }
-    
-    #eventImg {
-        width: 350px;
-        height: 400px;
-        margin-left: 20px;
-    }
-    
-    #eventContent {}
-    
-    .content {
-        display: inline-flex;
-    }
-    
-    #menu ul {
-        font-family: "FishFingers";
-    }
-    
-    .active {
-        text-decoration: underline;
-        background-color: #4CAF50;
-    }
-    
-    #menu {
-        margin: 0px auto;
-    }
-    
-    #menu ul {
-        text-align: center;
-    }
-    
-    #menu li {
-        display: inline-block;
-    }
-    
-    #menu li a,
-    #menu li span {
-        display: inline-block;
-        margin-left: 0.50em;
-        margin: 2em 1.5em 1em 1.5em;
-        letter-spacing: 0.20em;
-        text-decoration: none;
-        font-size: 0.90em;
-        font-weight: 600;
-        text-transform: uppercase;
-        outline: 0;
-        color: #FFF;
-    }
-</style>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="application/javascript">
-    $(document).ready(function() {
-
-        $(window).scroll(function() {
-
-            console.log($(window).scrollTop())
-            if ($(window).scrollTop() > 230) {
-                $('#menu-wrapper').addClass('navbar-fixed');
-            }
-            if ($(window).scrollTop() < 230) {
-                $('#menu-wrapper').removeClass('navbar-fixed');
-            }
-        });
-    });
-</script>
-
-
 
 <script type="application/javascript">
     function viewEvent(var1) {
-        document.getElementById('swar').style.display = "none";
-        document.getElementById('rhythmDivine').style.display = "none";
-        document.getElementById('purple').style.display = "none";
-        document.getElementById('madhur').style.display = "none";
+        document.getElementById('swarmanzar').style.display = "none";
+        document.getElementById('rhythm_divine').style.display = "none";
+        document.getElementById('purple_haze').style.display = "none";
+        document.getElementById('madhur_antakshari').style.display = "none";
         $('#purpleli').removeClass('active');
         $('#swarli').removeClass('active');
         $('#rhythmli').removeClass('active');
         $('#madhurli').removeClass('active');
-        $('#menu-wrapper').addClass('navbar-fixed');
         if (var1 == '1') {
-            document.getElementById('purple').style.display = "block";
-            document.title = "Purple Haze";
-            //document.getElementById("purple").scrollIntoView();
+            document.getElementById('purple_haze').style.display = "block";
             $('#purpleli').addClass('active');
 
         }
-        if (var1 == '2') {
-            document.getElementById('swar').style.display = "block";
-            document.title = "Swarmanzar";
+        else if (var1 == '2') {
+            document.getElementById('swarmanzar').style.display = "block";
             $('#swarli').addClass('active');
-            //document.getElementById("swar").scrollIntoView();
+           
         }
-        if (var1 == '3') {
-            document.getElementById('rhythmDivine').style.display = "block";
-            document.title = "Rhythm Divine";
+        else if (var1 == '3') {
+            document.getElementById('rhythm_divine').style.display = "block";
             $('#rhythmli').addClass('active');
-            //document.getElementById("rhythmDivine").scrollIntoView();
         }
-        if (var1 == '4') {
-            document.getElementById('madhur').style.display = "block";
-            document.title = "Madhur Antakshari";
+        else if (var1 == '4') {
+            document.getElementById('madhur_antakshari').style.display = "block";
             $('#madhurli').addClass('active');
-            //document.getElementById("madhur").scrollIntoView()
         }
 
     }
 </script>
-<div id="menu-wrapper">
+<div class="container">
+<div class="container-fluid">
     <nav id="menu">
         <ul>
             <li id="purpleli" class="active"><a onclick="viewEvent('1')">Purple Haze</a></li>
-            <li id="swarli"><a onclick="viewEvent('2')">Swarmanzar</a></li>
-            <li id="rhythmli"><a onclick="viewEvent('3')">Rhythm Divine</a></li>
-            <li id="madhurli"><a onclick="viewEvent('4')">Madhur Antakshari</a></li>
+            <li id="swarli"><a onclick="viewEvent('2')">Singing</a></li>
+            <li id="rhythmli"><a onclick="viewEvent('3')">Instrumental</a></li>
+            <li id="madhurli"><a onclick="viewEvent('4')">Antakshari</a></li>
 
         </ul>
     </nav>
 </div>
-<div id="wrapper">
-    <div id="purple">
 
-        <div class="extra2 container">
-            <div class="ebox1">
-                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
-                <div class="title">
-                    <h1>Purple Haze</h1>
-                    <div class="content">
-                        <div><img src=" " id="eventImg" /> </div>
-                        <div id="eventContent">
-                            <p class="byline" style="text-align:center; padding-top:20px">'Purple Haze' the Rock event of AAROHI gives you a chance to Like, Feel and Live.
-                                <p style="text-align:center;"><strong>The Incessant Rolling Of Drums, Persistent Strum Of Guitars, Deafening Beats and Reverberating Rhythms give you an experience of Soaring Adrenaline Level, Pacing Heart Beats, Dripping Perspiration and Gushing Blood Flow.</strong></p>
-                                <p style="text-align:center;"><strong>Can your beats produce the same fervour?</strong></p>
-                                <p style="text-align:center;"><strong>If yes, then come!</strong></p>
-                                <p style="text-align:center;"><strong>Set the floor on fire!!</strong></p>
-                                <p class="byline" style="text-align:center;">Win exciting prizes!!!</p>
-                        </div>
-                    </div>
-                </div>
+<div class="container top-buffer">
+    <div id="purple_haze">
+        <h1 class="event_name">Purple Haze</h1>
+        <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
             </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                     <p>
+            'Purple Haze' the Rock event of AAROHI gives you a chance to Like, Feel and Live.</p>
+            <p>
+            The Incessant Rolling Of Drums, Persistent Strum Of Guitars, Deafening Beats and Reverberating Rhythms give you an experience of Soaring Adrenaline Level, Pacing Heart Beats, Dripping Perspiration and Gushing Blood Flow.
+            Can your beats produce the same fervour?</p>
+            <p>If yes, then come!
+            Set the floor on fire!!</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Prizes worth 12k!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Ashwin
+                 </p>
+                 <p>
+                 +91 7798695593
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Kuldeep
+                 </p>
+                 <p>
+                 +91 8087679028
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon...</p>
+        </div>
         </div>
     </div>
-    <div id="swar" style="display:none;">
-
-        <div class="extra2 container">
-            <div class="ebox1">
-                <!--div class="hexagon"><span class="icon icon-lightbulb"></span></div-->
-                <div class="title">
-                    <h1>Swarmanzar</h1>
-                    <div class="content">
-                        <div><img src=" " id="eventImg" /> </div>
-                        <div id="eventContent">
-                            <p class="byline" style="text-align:center; padding-top:20px">'Don't sing just to sound melodious, sing to bewitch the hearts.'</p>
-                            <p style="text-align:center;"><strong>Do you believe that your voice is what it takes to take the crowd to a whole a new dimension of eternal melody?</strong></p>
-                            <p style="text-align:center;"><strong>Here is an imminent opportunity to discover the music maestro in you!</strong></p>
-                            <p style="text-align:center;"><strong><bold>‘Swarmanzar’</bold>-A rendezvous of spellbinding rhythms and enthralling euphony!!</strong></p>
-                            <p style="text-align:center;"><strong>Lose yourself in the symphonies,</strong></p>
-                            <p class="byline" style="text-align:center;">Sing your way to victory!!!</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div id="swarmanzar">
+         <h1 class="event_name">SwarManzar</h1>
+         <br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
             </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                     <p>'Don't sing just to sound melodious, sing to bewitch the hearts.'</p>
+                        <p>
+                        Do you believe that your voice is what it takes to take the crowd to a whole a new dimension of eternal melody?
+                        Here is an imminent opportunity to discover the music maestro in you!
+                        ‘Swarmanzar’-A rendezvous of spellbinding rhythms and enthralling euphony!!
+                        Lose yourself in the symphonies,</p>
+                        <p>
+                        Sing your way to victory!!!
+                        </p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Prizes worth 12k!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Ishan
+                 </p>
+                 <p>
+                 +91 8484949992
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Renuka
+                 </p>
+                 <p>
+                 +91 8380075124
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon...</p>
+        </div>
         </div>
     </div>
+</div>
 
-    <div id="rhythmDivine">
-        <div class="extra2 container">
-            <div class="ebox1">
-                <div class="title">
-                    <h1>RhythmDivine</h1>
-                    <div class="content">
-                        <div><img src=" " id="eventImg" /> </div>
-                        <div id="eventContent">
-                            <h1 style="text-align:center; padding-top:20px">Rhythm Divine</h1>
-                            <p class="byline" style="text-align:center; padding-top:20px">'One good thing about music, when it hits you, you feel no pain' - Bob Marley</p>
-                            <p style="text-align:center;"><strong>As we embark on our mission of creating euphoria, we urge you to accompany us in our endeavour of  ' Hakuna Matata' by your brisk instrumental talent.</strong></p>
-                            <p style="text-align:center;"><strong>Ostentate  your skills on ' Rhythm Divine' platform  and let the divinity of your music help the populace to decipher the mystiques of their life and manifest happiness.</strong></p>
-                            <p style="text-align:center;"><strong>From classical to rock and roll, from tabla to violin, the stage anticipates for your skills.</strong></p>
-                            <p class="byline" style="text-align:center;">Lots of prizes to be won!!!</p>
-                        </div>
-                    </div>
-                </div>
+    <div id="rhythm_divine">
+         <h1 class="event_name">Rythym Divine</h1><br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
             </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+          <p> 'One good thing about music, when it hits you, you feel no pain' - Bob Marley</p>
+            <p>As we embark on our mission of creating euphoria, we urge you to accompany us in our endeavour of ' Hakuna Matata' by your brisk instrumental talent.</p>
+           <p> Ostentate your skills on ' Rhythm Divine' platform and let the divinity of your music help the populace to decipher the mystiques of their life and manifest happiness.</p>
+            <p>From classical to rock and roll, from tabla to violin, the stage anticipates for your skills.</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Prizes worth 12k!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Rajat
+                 </p>
+                 <p>
+                 +91 7709066010
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Nischay
+                 </p>
+                 <p>
+                 +91 9028267298
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon...</p>
+        </div>
         </div>
     </div>
-    <div id="madhur">
-
-        <div class="extra2 container">
-            <div class="ebox1">
-                <div class="title">
-                    <h1>Madhur Antakshari</h1>
-                    <div class="content">
-                        <div><img src=" " id="eventImg" /> </div>
-                        <div id="eventContent">
-                            <h1 style="text-align:center; padding-top:20px">Madhur Antakshari</h1>
-                            <p class="byline" style="text-align:center; padding-top:20px">'Every heart sings a song, incomplete, until another heart whispers back. Those who wish to sing always find a song.'</p>
-                            <p style="text-align:center;"><strong>Are you fond of Bollywood songs and have a habit of mumbling them?</strong></p>
-                            <p style="text-align:center;"><strong>Now rejuvenate yourselves and cheer up as Aarohi caters you with the platform of 'Madhur  Antakshari'.  Enjoy in this perfect  and reminiscent atmosphere that will help you to redeem songs from your mind. Obsolete or latest songs, the one having a larger assortment will be the king.</strong></p>
-                            <p class="byline" style="text-align:center;">Lots of exciting goodies to be won.</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div id="madhur_antakshari">
+         <h1 class="event_name">Madhur Antakshari</h1><br>
+        <div class="event_content">
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+                <img class="event_image" src="images/swarmanzar.png">
             </div>
+                <div class="col-sm-7">
+                     <div id="intro">
+                        <p>'Every heart sings a song, incomplete, until another heart whispers back. Those who wish to sing always find a song.'</p>
+                        <p>Are you fond of Bollywood songs and have a habit of mumbling them?</p>
+                        <p>Now rejuvenate yourselves and cheer up as Aarohi caters you with the platform of 'Madhur Antakshari'. Enjoy in this perfect and reminiscent atmosphere that will help you to redeem songs from your mind. Obsolete or latest songs, the one having a larger assortment will be the king.</p>
+                     </div>
+                </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                 <h2 class="heading">Prizes</h2>
+                 <p>
+                    Prizes worth 12k!
+                 </p>
+        </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+                <h2 class="heading">Contact</h2>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                 <p>
+                 Aniruddha
+                 </p>
+                 <p>
+                 +91 7588393720
+                 </p>
+                 </div>
+                <div class="col-sm-5">
+                 <p>
+                 Rujuta
+                 </p>
+                 <p>
+                 +91 9090765360
+                 </p>
+                 </div>
+        </div>
+        <br>
+        <div class="row top-buffer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+        <h2 class="heading"> Timing</h2>
+        <p> Schedule will be updated soon...</p>
+        </div>
         </div>
     </div>
+    </div>
+</div>
 </div>

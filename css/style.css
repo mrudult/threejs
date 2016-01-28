@@ -11,8 +11,23 @@
 	font-weight:normal;
 	font-style:normal;
 }
+@font-face {
+	font-family:"Signika";
+	src:url("../fonts/Signika/Signika-Regular.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
 body{
 	overflow: hidden;
+}
+#loader{
+	margin-top: 0;
+	position: fixed;
+	width:100%;
+	height:100%;
+	z-index: 9999;
+	background: url(images/Instructions.png) center no-repeat #fff;
+	background-size: cover;
 }
 #globe
 {
@@ -20,30 +35,22 @@ body{
 	left: 0px;
 	top: 0px;
 	}
-#heading {
-	text-align: center;
-	font-size: 8em;
-	font-family: 'FishFingers',"Open Sans";
-}
-#heading  #aarohi{
-	color: #EF4423;
-}
-#heading  #version {
-	color: #35505F;
-}
+
+
 #popup_content
 {
-	margin-top:3em;
+	margin-top: 3em;
 	color:white;
-	text-align:center;
 }
 button{
 	cursor:pointer;
 }
+
 #social_media{
+	z-index:2;
 	position: fixed;
 	vertical-align: left;
-	margin-top: 6em;
+	margin-top: 7em;
 	padding-left: 1em;
 
 
@@ -57,3 +64,24 @@ button{
 height:72px;
 width:72px;
 }
+#dates{
+	z-index:2;
+		position: fixed;
+		margin-top: 18em;
+	vertical-align: center;
+	padding-left: 1em;
+
+}
+#dates p{
+	color: #384F56;
+	font-weight: bold;
+	font-family: 'FishFingers', 'Open Sans';
+	font-size: 1.2em;
+}
+#dates sup{
+	color: #384F56;
+    font-size: 0.6em;
+}
+#dates span{
+	color: #384F56;
+  }
