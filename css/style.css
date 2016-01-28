@@ -1,3 +1,13 @@
+#main_logo{
+  z-index: 2;
+  position: fixed;
+  margin-top: 1.6em;
+  vertical-align: center;
+  padding-left: 2em;
+}
+#main_logo img{
+  width: 35%;
+}
 /* custom fonts */
 @font-face {
 	font-family:"FishFingers";
@@ -34,7 +44,7 @@ body{
 	position: fixed;
 	left: 0px;
 	top: 0px;
-	}
+}
 #popup_content
 {
 	margin-top: 3em;
@@ -48,26 +58,24 @@ button{
 	z-index:2;
 	position: fixed;
 	vertical-align: left;
-	margin-top: 7em;
+	margin-top: 11em;
 	padding-left: 1em;
-
-
 }
 #social_media img {
 	width:65px;
 	height:65px;
-		padding :0.4em;
+  padding :0.4em;
 }
 #social_media img:hover  {
-height:72px;
-width:72px;
+  height:72px;
+  width:72px;
 }
 #dates{
 	z-index:2;
-		position: fixed;
-		margin-top: 18em;
-	vertical-align: center;
-	padding-left: 1em;
+  position: fixed;
+  margin-top: 21em;
+  vertical-align: center;
+  padding-left: 1em;
 
 }
 #dates p{
@@ -78,8 +86,8 @@ width:72px;
 }
 #dates sup{
 	color: #384F56;
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 #dates span{
 	color: #384F56;
-  }
+}

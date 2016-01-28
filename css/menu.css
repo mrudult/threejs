@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -22,9 +22,9 @@ a {
   text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 header {
@@ -100,11 +100,11 @@ header::before {
   .cd-logo {
     position: absolute;
     z-index: 2;
-    margin-top: 0.50%;
+    margin-top: 0.75%;
     margin-left: 2%;
   }
-  .cd-logo img {
-    width:70%;
+  .cd-logo a {
+    font-size: 1.2em;
     margin-top: 0px;
   }
 }
@@ -192,7 +192,7 @@ header::before {
 }
 
 .cd-main-nav {
-  
+
   position: fixed;
   z-index: 1;
   top: 0;
@@ -481,7 +481,7 @@ header::before {
   z-index: -10;
   min-height: 100vh;
   padding-top: 50px;
-   -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
 }
