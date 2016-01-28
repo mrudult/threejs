@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Aarohi 2016 | Central India's Largest Cultural Festival</title>
+<head>
+	<title>Aarohi 2016 | Central India's Largest Cultural Festival</title>
 
-		<!--- custom css-->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-		<link rel="stylesheet" href="css/menu.css"> <!-- Resource style -->
-		<link rel="stylesheet" type="text/css" href="css/fullscreen_overlay.css" >
-		
-		<!-- jquery-->
-		<script src="js/jquery/jquery-2.1.1.js"></script>
-	</head>
-	<body id ="main-content">
+	<!--- custom css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/menu.css"> <!-- Resource style -->
+	<link rel="stylesheet" type="text/css" href="css/fullscreen_overlay.css" >
+
+	<!-- jquery-->
+	<script src="js/jquery/jquery-2.1.1.js"></script>
+</head>
+<body id ="main-content">
 	<!-- menu -->
 	<div class="main_menu">
-	<header>
-		<div class="cd-logo">
-		<a href="#0"><img src="img/hobo.png" alt="Logo"></a>
-		</div>
+		<header>
+			<div class="cd-logo">
+				<a href="#0"><img src="img/hobo.png" alt="Logo"></a>
+			</div>
 
-		<nav class="cd-main-nav-wrapper">
-			<ul class="cd-main-nav">
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )"> About us</a>
-				</li>
-				<li>
-				<a href="#0">Proshow</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
-				</li>
-				<li>
-				<a href="#0">Social Initiatives</a>
-				</li>
-				<li>
-				<a href="#0">Workshops</a>
-				</li>
-				<li>
-				<a onclick="gotoGlobeMenu(globe_menu.get('sponsors').x , globe_menu.get('sponsors').z )">Sponsors</a>
-				</li>
-				<li>
-					<a href="#0" class="cd-subnav-trigger"><span>Events</span></a>
-					<ul>
-						<li class="go-back">
-						<a href="#0">Menu</a>
-						</li>
-						<li>
-						<a href="#0">Dance</a>
-						</li>
-						<li>
-						<a href="#0">Musicals</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('art_and_literary').x , globe_menu.get('art_and_literary').z )">Art And Literary</a>
-						</li>
-						<li>
-						<a onclick="gotoGlobeMenu(globe_menu.get('filmography').x , globe_menu.get('filmography').z )">Drama</a>
-						</li>
-						<li>
-						<a href="#" onclick="gotoGlobeMenu(globe_menu.get('informals').x , globe_menu.get('informals').z )">Informals</a>
-						</li>
-						<li>
-						<a href="#0" class="placeholder">Placeholder</a>
-						</li>
-					</ul>
-				</li>
-			</ul> <!-- .cd-main-nav -->
-		</nav> <!-- .cd-main-nav-wrapper -->
-		
-		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-	</header>
+			<nav class="cd-main-nav-wrapper">
+				<ul class="cd-main-nav">
+					<li>
+						<a onclick="gotoGlobeMenu(globe_menu.get('contact_us').x , globe_menu.get('contact_us').z )"> About us</a>
+					</li>
+					<li>
+						<a href="#0">Proshow</a>
+					</li>
+					<li>
+						<a onclick="gotoGlobeMenu(globe_menu.get('cn').x , globe_menu.get('cn').z )">Cultural Nite</a>
+					</li>
+					<li>
+						<a href="#0">Social Initiatives</a>
+					</li>
+					<li>
+						<a href="#0">Workshops</a>
+					</li>
+					<li>
+						<a onclick="gotoGlobeMenu(globe_menu.get('sponsors').x , globe_menu.get('sponsors').z )">Sponsors</a>
+					</li>
+					<li>
+						<a href="#0" class="cd-subnav-trigger"><span>Events</span></a>
+						<ul>
+							<li class="go-back">
+								<a href="#0">Menu</a>
+							</li>
+							<li>
+								<a href="#0">Dance</a>
+							</li>
+							<li>
+								<a href="#0">Musicals</a>
+							</li>
+							<li>
+								<a onclick="gotoGlobeMenu(globe_menu.get('art_and_literary').x , globe_menu.get('art_and_literary').z )">Art And Literary</a>
+							</li>
+							<li>
+								<a onclick="gotoGlobeMenu(globe_menu.get('filmography').x , globe_menu.get('filmography').z )">Drama</a>
+							</li>
+							<li>
+								<a href="#" onclick="gotoGlobeMenu(globe_menu.get('informals').x , globe_menu.get('informals').z )">Informals</a>
+							</li>
+							<li>
+								<a href="#0" class="placeholder">Placeholder</a>
+							</li>
+						</ul>
+					</li>
+				</ul> <!-- .cd-main-nav -->
+			</nav> <!-- .cd-main-nav-wrapper -->
+
+			<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+		</header>
 	</div>
 
-			<!-- ------------------------------------------------------------ -->
+	<!-- ------------------------------------------------------------ -->
 		<!-- <div id = "heading">
 			<span id="aarohi">Aarohi</span><span id ="version"> 2016</span>
 			<br>
@@ -82,7 +82,7 @@
 			<button type="button" class="overlay-close">Close</button>
 			<div id="popup_content"></div>
 		</div>
-		<div id="globe"></div> 
+		<div id="globe"></div>
 		<script src="js/build/three.min.js"></script>
 		<script src="js/libs/tween.min.js"></script>
 		<script src="js/THREEx.KeyboardState.js"></script>
@@ -90,12 +90,12 @@
 		<script src="js/controls/OrbitControls.js"></script>
 		<script src="js/Detector.js"></script>
 		<script>
-	if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-	var container,controls;
-	var targetRotationX = 0;
-	var targetRotationXOnMouseDown = 0;
-	var targetRotationY = 0;
-	var targetRotationYOnMouseDown = 0;
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			var container,controls;
+			var targetRotationX = 0;
+			var targetRotationXOnMouseDown = 0;
+			var targetRotationY = 0;
+			var targetRotationYOnMouseDown = 0;
 
 	// variables for mouse events
 	var mouseClicked = false;
@@ -111,10 +111,10 @@
 	var windowHalfY = window.innerHeight / 2;
 	// global var used for rotation method
 	var rotWorldMatrix,rotObjectMatrix, rotWorldMatrix, rotation_matrix, camera, scene, renderer, objects, skyBox, globe, parent;
-	
+
 	// menu item variables
 	var contact_us, sponsors, film, guitar, informals, proshow, art, light, cn;
-	
+
 	// for mouse hover
 	var canvas1, context1,sprite1,texture1,mouse=new THREE.Vector3();
 
@@ -122,7 +122,7 @@
 	var x_axis = new THREE.Vector3(1,0,0);
 	var z_axis = new THREE.Vector3(0,0,1);
 	var xrot=0,zrot=0;
-	
+
 	// var for getting keyboard event
 	var keyboard = new THREEx.KeyboardState();
 
@@ -137,7 +137,7 @@
 
 
 	init();
-	function init() 
+	function init()
 	{
 		container = document.getElementById('globe');
 		document.body.appendChild( container );
@@ -172,7 +172,7 @@
 		parent.position.x=50;
 		parent.position.z=-90;
 		scene.add(parent);
-	
+
 		//skybox
 		var imagePrefix = "images/sky1/skybox_";
 		var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
@@ -180,18 +180,18 @@
 		var imageURLs = [];
 		for (var i = 0; i < 6; i++)
 		{
-			 imageURLs.push( imagePrefix + directions[i] + imageSuffix );
+			imageURLs.push( imagePrefix + directions[i] + imageSuffix );
 		}
-		 var materialArray = [];
-		 for (var i = 0; i < 6; i++)
-		  materialArray.push( new THREE.MeshBasicMaterial({
-		   map: THREE.ImageUtils.loadTexture( imageURLs[i] ),
-		   side: THREE.BackSide
-		  }));
-		 var skyGeometry = new THREE.CubeGeometry( 50000, 50000, 50000 );
-		 var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
-		  skyBox = new THREE.Mesh( skyGeometry, skyMaterial );	
-		  scene.add(skyBox);
+		var materialArray = [];
+		for (var i = 0; i < 6; i++)
+			materialArray.push( new THREE.MeshBasicMaterial({
+				map: THREE.ImageUtils.loadTexture( imageURLs[i] ),
+				side: THREE.BackSide
+			}));
+		var skyGeometry = new THREE.CubeGeometry( 50000, 50000, 50000 );
+		var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
+		skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
+		scene.add(skyBox);
 
 		//globe
 		var jsonLoader = new THREE.JSONLoader();
@@ -216,77 +216,77 @@
 			parent.add(film);
 		} );
 
-		jsonLoader.load( "models/menu_items/Contact.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			contact_us = new THREE.Mesh( geometry, material );
-			contact_us.scale.set(0.020,0.020,0.020);
-			contact_us.name = "contact_us";
-			parent.add(contact_us);
-		}
-		);
+		jsonLoader.load( "models/menu_items/Contact.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				contact_us = new THREE.Mesh( geometry, material );
+				contact_us.scale.set(0.020,0.020,0.020);
+				contact_us.name = "contact_us";
+				parent.add(contact_us);
+			}
+			);
 
-		jsonLoader.load( "models/menu_items/Sponsors.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			sponsors = new THREE.Mesh( geometry, material );
-			sponsors.scale.set(0.020,0.020,0.020);
-			sponsors.name = "sponsors"
-			parent.add(sponsors);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/informals.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			informals = new THREE.Mesh( geometry, material );
-			informals.scale.set(0.020,0.020,0.020);
-			informals.name = "informals"
-			parent.add(informals);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/Proshow.js", 
-		function ( geometry, materials ) 
-		{	var material = new THREE.MeshFaceMaterial( materials );
-			proshow = new THREE.Mesh( geometry, material );
-			proshow.scale.set(0.020,0.020,0.020);
-			proshow.name = "proshow"
-			parent.add(proshow);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/art.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			art = new THREE.Mesh( geometry, material );
-			art.scale.set(0.020,0.020,0.020);
-			art.name = "Art and Literary"
-			parent.add(art);
-		}
-		 );
+		jsonLoader.load( "models/menu_items/Sponsors.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				sponsors = new THREE.Mesh( geometry, material );
+				sponsors.scale.set(0.020,0.020,0.020);
+				sponsors.name = "sponsors"
+				parent.add(sponsors);
+			}
+			);
+		jsonLoader.load( "models/menu_items/informals.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				informals = new THREE.Mesh( geometry, material );
+				informals.scale.set(0.020,0.020,0.020);
+				informals.name = "informals"
+				parent.add(informals);
+			}
+			);
+		jsonLoader.load( "models/menu_items/Proshow.js",
+			function ( geometry, materials )
+			{	var material = new THREE.MeshFaceMaterial( materials );
+				proshow = new THREE.Mesh( geometry, material );
+				proshow.scale.set(0.020,0.020,0.020);
+				proshow.name = "proshow"
+				parent.add(proshow);
+			}
+			);
+		jsonLoader.load( "models/menu_items/art.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				art = new THREE.Mesh( geometry, material );
+				art.scale.set(0.020,0.020,0.020);
+				art.name = "Art and Literary"
+				parent.add(art);
+			}
+			);
 
-		jsonLoader.load( "models/menu_items/CN.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			cn = new THREE.Mesh( geometry, material );
-			cn.scale.set(0.020,0.020,0.020);
-			cn.name = "cultural_nite";
-			parent.add(cn);
-		}
-		 );
-		jsonLoader.load( "models/menu_items/guitar.js", 
-		function ( geometry, materials ) 
-		{
-			var material = new THREE.MeshFaceMaterial( materials );
-			guitar = new THREE.Mesh( geometry, material );
-			guitar.scale.set(0.020,0.020,0.020);
-			cn.name = "Musicals";
-			parent.add(guitar);
-		}
-		 );
+		jsonLoader.load( "models/menu_items/CN.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				cn = new THREE.Mesh( geometry, material );
+				cn.scale.set(0.020,0.020,0.020);
+				cn.name = "cultural_nite";
+				parent.add(cn);
+			}
+			);
+		jsonLoader.load( "models/menu_items/guitar.js",
+			function ( geometry, materials )
+			{
+				var material = new THREE.MeshFaceMaterial( materials );
+				guitar = new THREE.Mesh( geometry, material );
+				guitar.scale.set(0.020,0.020,0.020);
+				cn.name = "Musicals";
+				parent.add(guitar);
+			}
+			);
 		// ----------------------------------------------------------------------------------------------------
 		// lights
 		var ambientLight = new THREE.AmbientLight(0xcccccc);
@@ -299,19 +299,19 @@
 		var light2 = new THREE.DirectionalLight( 0xffffff, .60 );
 		light2.position.set(-1,1,0);
 		scene.add( light2 );
-	
+
 		// User interaction
-	document.addEventListener( 'mousedown', onMouseDown, false );
-	document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-	document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-	window.addEventListener( 'resize', onWindowResize, false );
-	animate();
+		document.addEventListener( 'mousedown', onMouseDown, false );
+		document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+		document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+		window.addEventListener( 'resize', onWindowResize, false );
+		animate();
 
 	}
-	
+
 
 	// object picker function
-	function onMouseDown( event ) 
+	function onMouseDown( event )
 	{
 		mouseClicked= true;
 		event.preventDefault();
@@ -320,7 +320,7 @@
 		// now we update the mouseVector variable
 		mouseVector.x = (event.clientX / window.innerWidth)*2 - 1;
 		mouseVector.y = -(event.clientY / window.innerHeight)*2 + 1;
-		
+
 		// lets find the intersections
 		// making 3d vector using the mouse click 2d coordinates , z coordinaate is given 0
 		var vector = new THREE.Vector3(mouseVector.x , mouseVector.y ,0);
@@ -329,12 +329,12 @@
 		// now cast a ray in  thee direction of the camera and see the objects it passes through
 		var ray =  new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
 		var intersects = ray.intersectObjects( parent.children );
-	  	if(intersects.length > 0)
-			{
-				var url = "overlay_scripts/"+ intersects[0].object.name+".html";
-				toggleOverlay();
-				loadHTML(url);
-			}
+		if(intersects.length > 0)
+		{
+			var url = "overlay_scripts/"+ intersects[0].object.name+".html";
+			toggleOverlay();
+			loadHTML(url);
+		}
 		document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 		document.addEventListener( 'mouseup', onDocumentMouseUp, false );
 		document.addEventListener( 'mouseout', onDocumentMouseOut, false );
@@ -345,7 +345,7 @@
 		mouseYOnMouseDown = event.clientY - windowHalfY;
 		targetRotationYOnMouseDown = targetRotationY;
 
-		}
+	}
 
 	function onDocumentMouseMove( event ) {
 
@@ -395,23 +395,23 @@
 			targetRotationY = targetRotationYOnMouseDown + ( mouseY - mouseYOnMouseDown ) * 0.001;
 		}
 	}
-		function loadHTML( url)
+	function loadHTML( url)
+	{
+		$('#popup_content').load(url, function( status )
 		{
-			 $('#popup_content').load(url, function( status )
-			 	{
-			 		if(status =="error")
-			 		{
-			 			alert("error");
-			 			$('#popup_content').load("overlay_scripts/404.html");
-			 		}
-			 	}); 
-		}
+			if(status =="error")
+			{
+				alert("error");
+				$('#popup_content').load("overlay_scripts/404.html");
+			}
+		});
+	}
 	function gotoGlobeMenu(x_desired,z_desired)
 	{
 		new TWEEN.Tween(globe.rotation).to( {x: x_desired , z : z_desired},1200 ).easing(TWEEN.Easing.Elastic.Out).start();
 		new TWEEN.Tween(parent.rotation).to( {x: x_desired , z : z_desired},1200).easing(TWEEN.Easing.Elastic.Out).start();
-			xrot=x_desired;
-			zrot=z_desired;
+		xrot=x_desired;
+		zrot=z_desired;
 	}
 
 	function onWindowResize() {
@@ -424,9 +424,9 @@
 
 		renderer.setSize( window.innerWidth, window.innerHeight );
 	}
-	
 
-	function animate() 
+
+	function animate()
 	{
 		requestAnimationFrame( animate );
 		render();
@@ -475,11 +475,11 @@
 			globe.rotation.z=zrot;
 		}
 		if(zrot >= 2*Math.PI)
-		{ 
+		{
 			zrot-= 2*Math.PI;
 		}
 		else if(zrot <= -2*Math.PI)
-		{ 
+		{
 			zrot+= 2*Math.PI;
 		}
 		if(xrot <= -2*Math.PI)
@@ -499,19 +499,19 @@
 		// 	// parent.rotation.x+= ( targetRotationY - parent.rotation.x ) * 0.01;
 		// 	//mouseClicked= false;
 		// }
-		// controls.update();	
+		// controls.update();
 	}
 	function render()
 	{
 		renderer.render( scene, camera );
 	}
-		</script>
-				<!-- js files for menu-->
-		 <script src="js/menu/classie.js"></script>
-		 <script src="js/menu/main.js"></script> 
-		 <script src="js/menu/modernizr.js"></script>
-		
-		 <!-- js file for popup -->
-		 <script src="js/popup/overlay.js"></script>
-	</body>
+</script>
+<!-- js files for menu-->
+<script src="js/menu/classie.js"></script>
+<script src="js/menu/main.js"></script>
+<script src="js/menu/modernizr.js"></script>
+
+<!-- js file for popup -->
+<script src="js/popup/overlay.js"></script>
+</body>
 </html>
