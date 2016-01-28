@@ -22,11 +22,6 @@
 			console.log("Mobile browser");
       //window.location.href = 'https://www.quora.com/'
     };
-    $(window).load(function() {
-    	setTimeout(function(){
-    		$("#loader").delay('10000').fadeOut('slow');
-    	}, 1000);
-    });
   </script>
   <style>
   	a:hover{
@@ -102,11 +97,9 @@
 					</li>
 				</ul> <!-- .cd-main-nav -->
 			</nav> <!-- .cd-main-nav-wrapper -->
-
 			<a href="#0" class="cd-nav-trigger"><span></span></a>
 		</div>
 	</header>
-
 	<div id="social_media">
 		<a target="_blank" href="http://www.facebook.com/aarohiworld"><img src="images/social_media/facebook.png"></a><br>
 		<a target="_blank" href="http://www.twitter.com/aarohi_vnit"><img src="images/social_media/twitter.png"></a><br>
@@ -114,7 +107,6 @@
 		<a target="_blank" href="http://www.youtube.com/VNITAarohi"><img src="images/social_media/youtube.png"></a>
 	</div>
 	<div id="rulebook">
-
 		<img src="img/rulebook.png">
 	</div>
 	<div class="col-sm-4 col-xs-12" id="main_logo">
@@ -133,11 +125,8 @@
 		<button type="button" class="overlay-close">Close</button>
 		<div id="popup_content"></div>
 	</div>
-
 	<script src="js/menu/main.js"></script>
 	<script src="js/menu/classie.js"></script>
-
-
 	<!-- js file for popup -->
 	<script src="js/popup/overlay.js"></script>
 	<div id="globe"></div>
@@ -148,6 +137,14 @@
 	<script src="js/controls/OrbitControls.js"></script>
 	<script src="js/Detector.js"></script>
 	<script>
+		THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+			if (loaded == total) {
+				console.log("Hurray!");
+				setTimeout(function(){
+	    		$("#loader").delay('1000').fadeOut('slow');
+	    	}, 1000);
+			};
+		};
 		if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 		var container,controls;
 
@@ -541,7 +538,6 @@
 	{
 		renderer.render( scene, camera );
 	}
-
 </script>
 </body>
 </html>
