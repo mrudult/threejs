@@ -73,12 +73,6 @@ button{
   height:72px;
   width:72px;
 }
-#dates {
-  margin-top: 11.5em;
-  padding-left: 4em;
-  position: fixed;
-  z-index: 2;
-}
 #info{
  margin-top: 21.5em;
  padding-left: 1em;
@@ -89,12 +83,6 @@ button{
   color: #384F56;
   font-family: 'Helvetica';
   font-size: 0.6em;
-}
-#dates p{
-	color: #384F56;
-	font-weight: bold;
-	font-family: 'FishFingers', 'Open Sans';
-	font-size: 1em;
 }
 #dates sup{
 	color: #384F56;
