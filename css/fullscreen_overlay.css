@@ -1,3 +1,9 @@
+.vcenter {
+  display: inline-block;
+  float: none;
+  padding: 40px;
+  vertical-align: middle;
+}
 /* Overlay style */
 .overlay {
 	overflow-y:scroll;

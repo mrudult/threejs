@@ -28,7 +28,6 @@
    a:hover{
     text-decoration: none;
   }
-
 </style>
 </head>
 <body id ="main-content">
@@ -268,14 +267,6 @@
 		} );
 		// Trees   -----------------------------------------------------------------------------
    jsonLoader = new THREE.JSONLoader();
-   jsonLoader.load( "models/sun/Trees.js", function (geometry,materials)
-   {
-     var material = new THREE.MeshFaceMaterial( materials );
-     trees = new THREE.Mesh( geometry, material );
-     trees.scale.set(0.020,0.020,0.020);
-     trees.name="trees";
-     parent.add( trees );
-   } );
 
 		// menu items for globe ---------------------------------------------------------------------------
    jsonLoader = new THREE.JSONLoader();
