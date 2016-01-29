@@ -1,3 +1,8 @@
+#logo{
+  display: inline;
+  text-align: left;
+  float: left;
+}
 #main_logo{
   z-index: 1;
   position: fixed;
@@ -8,7 +13,6 @@
 #vnit_logo{
   margin-top: 0.4em;
   margin-left: -1.6em;
-
 }
 /* custom fonts */
 @font-face {
@@ -74,14 +78,15 @@ button{
   width:72px;
 }
 #info{
- margin-top: 21.5em;
- padding-left: 1em;
+ bottom: 0;
+ left: 0;
  position: fixed;
  z-index: 2;
 }
 #info p{
   color: #384F56;
   font-family: 'Helvetica';
+  font-weight: bold;
   font-size: 0.6em;
 }
 #dates sup{

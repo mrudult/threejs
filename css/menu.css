@@ -90,11 +90,11 @@ header::before {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  background-image: url(img/hobo.png);
 }
 .cd-logo img {
-  display: block;
+  display: inline;
   max-width: 65%;
-  margin-top: 8px;
 }
 @media only screen and (min-width: 1024px) {
   .cd-logo {
