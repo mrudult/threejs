@@ -1,0 +1,211 @@
+/* Overlay style */
+.overlay {
+	overflow-y:scroll;
+	z-index:15;
+	position: fixed;
+	width: 100%;
+	height: 92.5%;
+	top: 7.50%;
+	left: 0%;
+	background: rgba(51,65,71,1.0);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	background: url(../images/misc/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+}
+
+.content{
+  font-family: "Signika";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Effects */
+.overlay-corner {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(-50px) translateX(-50px);
+	transform: translateY(-50px) translateX(-50px);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s, visibility 0s 0.3s;
+	transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
+}
+
+.overlay-corner.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 50px;
+	}
+}
+
+.heading{
+	margin-bottom: 1px;
+  font-family: 'Helsinki', 'Open Sans';
+}
+p{
+	text-align: left;
+  font-weight: lighter;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  font-family: 'Signika', 'Open Sans';
+}
+#purple_haze {
+  display: block;
+}
+
+#madhur_antakshari {
+  display: none;
+}
+
+#rhythm_divine {
+  display: none;
+}
+
+#swarmanzar {
+  display: none;
+}
+#informals{
+	display: block;
+}
+#pentathlon{
+	display: none;
+}
+#film{
+	display: block;
+}
+#photo{
+	display: none;
+}
+#quiz{
+	display: block;
+}
+#cynosure{
+	display: block;
+}
+#big_fight{
+	display: none;
+}
+#literary{
+	display: none;
+}
+#art_conoscenza{
+	display: block;
+}
+#halla_bol{
+	display: block;
+}
+#abhi{
+	display: none;
+}
+.event_image {
+  width: 400px;
+  height: 300px;
+}
+
+.event_name{
+	padding-top: 10px;
+  font-family: 'Helsinki';
+  text-align: center;
+}
+/*menu*/
+#menu ul {
+  font-family: "FishFingers";
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+#menu {
+  margin: 0px 0px auto;
+}
+
+#menu ul {
+  text-align: center;
+}
+
+#menu li {
+	min-height: 25px;
+	max-height: 40px;
+  display: inline-block;
+}
+#menu li a,
+#menu li span {
+  display: inline-block;
+  margin-left: 0.50em;
+  margin: 0.1em 1.5em 1em 1.5em;
+  letter-spacing: 0.20em;
+  text-decoration: none;
+  font-size: 0.90em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#FFF;
+}
+.event_content{
+	margin-bottom: 25px;
+	margin-left: 25px;
+}
+.top-buffer{
+	margin-top:10px;
+}
+.tile
+{
+  height:150px;
+  width: 400px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  opacity: 1;
+}
+#contact_us{
+  margin-top:2em;
+  color:#000;
+}
+#contact_us header{
+  padding-top:0.3em;
+  color:#000;
+}
+.bottom-buffer{
+  margin-bottom: 1em;
+}
+.person_name{
+  font-size: 0.9em;
+  font-family: 'Signika', "Open Sans";
+}
+.contact-heading{
+  padding-top: 0.4em;
+  font-family: 'Helsinki', "Open Sans";
+  font-size: 1em;
+}
+.mail{
+  font-family: 'Signika', "Open Sans";
+  font-size: 0.7em;
+}
+.address_box{
+  padding-top:0.8em;
+}

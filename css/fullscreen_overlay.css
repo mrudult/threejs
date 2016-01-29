@@ -64,15 +64,16 @@
 }
 
 .heading{
+	line-height: 1.5;
 	margin-bottom: 1px;
   font-family: 'Helsinki', 'Open Sans';
 }
 p{
-	text-align: left;
-  font-weight: lighter;
+  font-family: "Signika";
   font-size: 0.8em;
-  letter-spacing: 0.1em;
-  font-family: 'Signika', 'Open Sans';
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
 }
 #purple_haze {
   display: block;

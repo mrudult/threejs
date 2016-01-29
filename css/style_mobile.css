@@ -1,0 +1,124 @@
+
+/* custom fonts */
+@font-face {
+	font-family:"FishFingers";
+	src:url("../fonts/FishFingers/Fishfingers.eot?") format("eot"),url("../fonts/FishFingers/Fishfingers.woff") format("woff"),url("../fonts/FishFingers/Fishfingers.ttf") format("truetype"),url("../fonts/FishFingers/Fishfingers.svg#FISHfingers") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"Helsinki";
+	src:url("../fonts/Helsinki/helsinki.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"Signika";
+	src:url("../fonts/Signika/Signika-Regular.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+body{
+	overflow: hidden;
+}
+#loader{
+	margin-top: 0;
+	position: fixed;
+	width:100%;
+	height:100%;
+	z-index: 9999;
+	background: url(../images/pre_final.png) center no-repeat #fff;
+	background-size: cover;
+}
+
+#globe
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+#popup_content
+{
+	margin-top: 3em;
+	color:white;
+}
+button{
+	cursor:pointer;
+}
+
+#social_media{
+	z-index:1;
+	position: fixed;
+	vertical-align: left;
+	margin-top: 4em;
+	padding-left: 0em;
+}
+#social_media img {
+	width:65px;
+	height:65px;
+  padding :0.4em;
+}
+#social_media img:hover  {
+  height:72px;
+  width:72px;
+}
+#dates{
+	z-index:1;
+  position: fixed;
+  bottom: 0.1em;
+  vertical-align: center;
+  padding-left: 1em;
+
+}
+#dates p{
+	color: #384F56;
+	font-weight: bold;
+	font-family: 'FishFingers', 'Open Sans';
+	font-size: 1em;
+}
+#dates sup{
+	color: #384F56;
+  font-size: 0.6em;
+}
+#dates span{
+	color: #384F56;
+}
+#rulebook{
+	cursor: pointer;
+	z-index:2;
+  position: fixed;
+  margin-top: 2em;
+ right:-5px;
+ 
+}
+#rulebook img{
+	opacity: 0.4;
+	width:40%;
+}
+#rulebook img:hover{
+	opacity: 1;
+	width: 80%;
+}
+#main_logo{
+  z-index: 1;
+  position: absolute;
+  margin-top: 6em;
+  vertical-align: center;
+  padding-left: 2.4em;
+}
+#main_logo img{
+	width:90%;
+}
+#show_image{
+
+}
+#show_image img {
+		display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:75%;
+	
+}
+.bottom-buffer{
+	padding-bottom: 0.3em;
+}
