@@ -6,8 +6,8 @@
   padding-left: 2em;
 }
 #vnit_logo{
-margin-top: 0.4em;	
-margin-left: -1.6em;
+  margin-top: 0.4em;
+  margin-left: -1.6em;
 
 }
 /* custom fonts */
@@ -73,13 +73,22 @@ button{
   height:72px;
   width:72px;
 }
-#dates{
-	z-index:2;
+#dates {
+  margin-top: 11.5em;
+  padding-left: 4em;
   position: fixed;
-  margin-top: 21em;
-  vertical-align: left;
-  padding-left: 1em;
-
+  z-index: 2;
+}
+#info{
+ margin-top: 21.5em;
+ padding-left: 1em;
+ position: fixed;
+ z-index: 2;
+}
+#info p{
+  color: #384F56;
+  font-family: 'Open Sans';
+  font-size: 0.6em;
 }
 #dates p{
 	color: #384F56;
@@ -99,8 +108,8 @@ button{
 	z-index:2;
   position: fixed;
   margin-top: 2em;
- right:-5px;
- 
+  right:-5px;
+
 }
 #rulebook img{
 	opacity: 0.4;
@@ -114,11 +123,11 @@ button{
 
 }
 #cn_image img {
-		display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width:75%;
-	
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:75%;
+
 }
 .bottom-buffer{
 	padding-bottom: 0.3em;
